@@ -12,7 +12,7 @@ public class Aassignment15 {
 		//with one parameter
 		(x) -> System.out.println("with one parameter: " + x );
 
-		//with two parameter
+		//with two parameter//with two parameters
 		(x,y) -> System.out.println("with two parameters: " + x +" , " +y);
 
 		//with three parameters
