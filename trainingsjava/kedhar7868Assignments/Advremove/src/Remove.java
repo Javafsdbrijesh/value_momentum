@@ -15,7 +15,7 @@ public static void main(String[] args) {
         myarray[i] = myarray[i + 1];
       }
    
-
+//hi welcome to eclipse
    
    System.out.println("\nAfter removing the  element: "+Arrays.toString(myarray));
    
