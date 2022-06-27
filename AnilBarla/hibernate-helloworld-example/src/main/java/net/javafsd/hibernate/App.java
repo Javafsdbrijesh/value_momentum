@@ -1,9 +1,10 @@
 package net.javafsd.hibernate;
 
 import org.hibernate.Session;
+
 import org.hibernate.Transaction;
- 
-//import net.javafsd.hibernate.entity.Customer;
+
+import net.javafsd.hibernate.entity.Customer;
 import net.javafsd.hibernate.entity.Student;
 import net.javafsd.hibernate.util.HibernateUtil;
 
@@ -14,8 +15,8 @@ public class App {
 	        Student student = new Student("Abhiram", "Masina", "abhiram@javafsd.com");
 	        Student student1 = new Student("Gopinadh", "Kandepu", "gopinadh@javafsd.com");
 
-//	        Customer customer1 = new Customer("Sumith", "Masina", "sumith@javafsd.com");
-//	        Customer customer = new Customer("Harshil", "Kandepu", "harshil@javafsd.com");
+	        Customer customer1 = new Customer("Anil", "Barla", "anil@javafsd.com");
+	        Customer customer = new Customer("manoj", "thammi", "manoj@javafsd.com");
 
 	        Transaction transaction = null;
 
@@ -27,8 +28,8 @@ public class App {
 	            // save the student objects
 	            session.save(student);
 	            session.save(student1);
-//	            session.save(customer);
-//	            session.save(customer1);
+	            session.save(customer);
+                session.save(customer1);
 
 	            // commit transaction
 	            transaction.commit();

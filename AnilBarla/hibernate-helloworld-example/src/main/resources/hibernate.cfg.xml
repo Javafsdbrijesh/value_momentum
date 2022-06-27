@@ -26,5 +26,6 @@
         <property name="hibernate.dbcp.minIdle">5</property>
         <property name="hibernate.dbcp.maxWaitMillis">-1</property>
         <mapping class="net.javafsd.hibernate.entity.Student" />
+        <mapping class="net.javafsd.hibernate.entity.Customer" />
     </session-factory>
 </hibernate-configuration>
