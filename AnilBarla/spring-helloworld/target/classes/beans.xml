@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+	<bean id="Hello" class="com.spring.helloworld.Hello">
+		<property name="name" value="Anil"></property>
+		<property name="age" value="21"></property>
+		<property name="email" value="Anil@valuemomentum.com"></property>
+	</bean>
+
+
+
+
+</beans> 
