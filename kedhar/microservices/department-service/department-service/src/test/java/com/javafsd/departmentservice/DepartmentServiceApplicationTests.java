@@ -1,10 +1,10 @@
-package com.javafsd.valuemomentum;
+package com.javafsd.departmentservice;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class ValuemomentumApplicationTests {
+class DepartmentServiceApplicationTests {
 
 	@Test
 	void contextLoads() {
