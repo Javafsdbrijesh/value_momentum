@@ -9,14 +9,14 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class ValuemomentumApplication {
  
-    public static void main(String[] args) {
-        SpringApplication.run(ValuemomentumApplication.class, args);
-    }
+	 public static void main(String[] args) {
+	        SpringApplication.run(ValuemomentumApplication.class, args);
+	    }
 
-    @GetMapping("/hello")
-    public String helloWorld() {
+	    @GetMapping("/hello")
+	    public String helloWorld() {
 
-        return "Hello Spring boot!";
-    }
+	        return "Hello Spring boot!";
+	    }
  
 }
