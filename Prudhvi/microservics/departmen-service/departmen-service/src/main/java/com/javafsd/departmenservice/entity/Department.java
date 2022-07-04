@@ -18,19 +18,20 @@ import javax.persistence.Column;
 @Table(name ="department")
 public class Department {
 
-    @Override
-	public String toString() {
-		return "Department [deparmtmentId=" + deparmtmentId + ", department_name=" + department_name
-				+ ", department_address=" + department_address + ", department_code=" + department_code + "]";
-	}
+  
+	@Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name = "deparment_id")
+    private long deparmtmentId;
 
-	public Department(long deparmtmentId, String department_name, String department_address, String department_code) {
-		super();
-		this.deparmtmentId = deparmtmentId;
-		this.department_name = department_name;
-		this.department_address = department_address;
-		this.department_code = department_code;
-	}
+    @Column(name = "deparment_name")
+    private String departmentName;
+
+    @Column(name = "deparment_address")
+    private String departmentAddress;
+
+    @Column(name = "deparment_code")
+    private String departmentCode;
 
 	/**
 	 * @return the deparmtmentId
@@ -47,59 +48,63 @@ public class Department {
 	}
 
 	/**
-	 * @return the department_name
+	 * @return the departmentName
 	 */
-	public String getDepartment_name() {
-		return department_name;
+	public String getDepartmentName() {
+		return departmentName;
 	}
 
 	/**
-	 * @param department_name the department_name to set
+	 * @param departmentName the departmentName to set
 	 */
-	public void setDepartment_name(String department_name) {
-		this.department_name = department_name;
+	public void setDepartmentName(String departmentName) {
+		this.departmentName = departmentName;
 	}
 
 	/**
-	 * @return the department_address
+	 * @return the departmentAddress
 	 */
-	public String getDepartment_address() {
-		return department_address;
+	public String getDepartmentAddress() {
+		return departmentAddress;
 	}
 
 	/**
-	 * @param department_address the department_address to set
+	 * @param departmentAddress the departmentAddress to set
 	 */
-	public void setDepartment_address(String department_address) {
-		this.department_address = department_address;
+	public void setDepartmentAddress(String departmentAddress) {
+		this.departmentAddress = departmentAddress;
 	}
 
 	/**
-	 * @return the department_code
+	 * @return the departmentCode
 	 */
-	public String getDepartment_code() {
-		return department_code;
+	public String getDepartmentCode() {
+		return departmentCode;
 	}
 
 	/**
-	 * @param department_code the department_code to set
+	 * @param departmentCode the departmentCode to set
 	 */
-	public void setDepartment_code(String department_code) {
-		this.department_code = department_code;
+	public void setDepartmentCode(String departmentCode) {
+		this.departmentCode = departmentCode;
 	}
 
-	@Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "deparment_id")
-    private long deparmtmentId;
+	public Department(long deparmtmentId, String departmentName, String departmentAddress, String departmentCode) {
+		super();
+		this.deparmtmentId = deparmtmentId;
+		this.departmentName = departmentName;
+		this.departmentAddress = departmentAddress;
+		this.departmentCode = departmentCode;
+	}
 
-    @Column(name = "deparment_name")
-    private String department_name;
+	public Department() {
+		
+	}
 
-    @Column(name = "deparment_address")
-    private String department_address;
-
-    @Column(name = "deparment_code")
-    private String department_code;
+	@Override
+	public String toString() {
+		return "Department [deparmtmentId=" + deparmtmentId + ", departmentName=" + departmentName
+				+ ", departmentAddress=" + departmentAddress + ", departmentCode=" + departmentCode + "]";
+	}
 
 }

@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.javafsd.departmenservice.entity.Department;
+import com.javafsd.departmenservice.error.DepartmentNotFoundException;
 import com.javafsd.departmenservice.service.impl.DepartmentService;
  
 @RestController

@@ -17,4 +17,9 @@ public class UserService {
         return userResponse;
     }
 
+	public User saveUser(User user) {
+		// TODO Auto-generated method stub
+		return user;
+	}
+
 }
