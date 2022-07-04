@@ -7,6 +7,6 @@ import com.javafsd.departmentservice.entity.Department;
 
 @Repository
 public interface DepartmentRepository extends JpaRepository<Department,Long> {
-	
+	 public Department findByDepartmentName(String name);
 
 }
