@@ -94,7 +94,7 @@ public class User {
 	/**
 	 * @return the contact
 	 */
-	public long getContact() {
+	public Long getContact() {
 		return Contact;
 	}
 
