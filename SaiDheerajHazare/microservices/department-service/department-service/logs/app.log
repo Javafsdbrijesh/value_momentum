@@ -1,0 +1,1 @@
+16:21:31.165 INFO  org.springframework.orm.jpa.AbstractEntityManagerFactoryBean (restartedMain) [o.s.o.j.LocalContainerEntityManagerFactoryBean] -- Initialized JPA EntityManagerFactory for persistence unit 'default'

@@ -1,0 +1,29 @@
+15:58:29.067 INFO  org.springframework.orm.jpa.AbstractEntityManagerFactoryBean (restartedMain) [o.s.o.j.LocalContainerEntityManagerFactoryBean] -- Initialized JPA EntityManagerFactory for persistence unit 'default'
+15:58:29.142 WARN  org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration (restartedMain) [o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration] -- spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+15:58:29.242 INFO  org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer (restartedMain) [o.s.b.d.a.OptionalLiveReloadServer] -- LiveReload server is running on port 35729
+15:58:29.253 INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer (restartedMain) [o.s.b.w.e.tomcat.TomcatWebServer] -- Tomcat started on port(s): 9092 (http) with context path ''
+15:58:29.257 INFO  org.springframework.boot.StartupInfoLogger (restartedMain) [c.j.d.DepartmentServiceApplication] -- Started DepartmentServiceApplication in 0.678 seconds (JVM running for 277.153)
+15:58:29.261 INFO  org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener (restartedMain) [o.s.b.d.a.ConditionEvaluationDeltaLoggingListener] -- Condition evaluation unchanged
+15:59:25.835 INFO  org.apache.juli.logging.DirectJDKLog (http-nio-9092-exec-1) [o.a.c.c.C.[Tomcat].[localhost].[/]] -- Initializing Spring DispatcherServlet 'dispatcherServlet'
+15:59:25.836 INFO  org.springframework.web.servlet.FrameworkServlet (http-nio-9092-exec-1) [o.s.web.servlet.DispatcherServlet] -- Initializing Servlet 'dispatcherServlet'
+15:59:25.837 INFO  org.springframework.web.servlet.FrameworkServlet (http-nio-9092-exec-1) [o.s.web.servlet.DispatcherServlet] -- Completed initialization in 1 ms
+15:59:25.848 INFO  com.javafsd.departmentservice.controller.DepartmentController (http-nio-9092-exec-1) [c.j.d.c.DepartmentController] -- Inside fetchDepartmentById method
+15:59:25.865 INFO  com.javafsd.departmentservice.controller.DepartmentController (http-nio-9092-exec-1) [c.j.d.c.DepartmentController] -- Inside fetchDepartmentById method, Response : Department [departmentId=1, departmentName=Admin, departmentAddress=pune, departmentCode=Admin069]
+16:19:18.534 INFO  org.springframework.orm.jpa.AbstractEntityManagerFactoryBean (Thread-7) [o.s.o.j.LocalContainerEntityManagerFactoryBean] -- Closing JPA EntityManagerFactory for persistence unit 'default'
+16:19:18.536 INFO  com.zaxxer.hikari.HikariDataSource (Thread-7) [com.zaxxer.hikari.HikariDataSource] -- HikariPool-2 - Shutdown initiated...
+16:19:18.546 INFO  com.zaxxer.hikari.HikariDataSource (Thread-7) [com.zaxxer.hikari.HikariDataSource] -- HikariPool-2 - Shutdown completed.
+16:19:18.629 INFO  org.springframework.boot.StartupInfoLogger (restartedMain) [c.j.d.DepartmentServiceApplication] -- Starting DepartmentServiceApplication using Java 11.0.8 on VSP-H633JL3 with PID 15768 (C:\ValueMomentum\SaiDheerajHazare\microservices\department-service\department-service\target\classes started by SaiDheerajHazare in C:\ValueMomentum\SaiDheerajHazare\microservices\department-service\department-service)
+16:19:18.629 INFO  org.springframework.boot.SpringApplication (restartedMain) [c.j.d.DepartmentServiceApplication] -- No active profile set, falling back to 1 default profile: "default"
+16:19:18.813 INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate (restartedMain) [o.s.d.r.c.RepositoryConfigurationDelegate] -- Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+16:19:18.825 INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate (restartedMain) [o.s.d.r.c.RepositoryConfigurationDelegate] -- Finished Spring Data repository scanning in 12 ms. Found 1 JPA repository interfaces.
+16:19:18.903 INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer (restartedMain) [o.s.b.w.e.tomcat.TomcatWebServer] -- Tomcat initialized with port(s): 9092 (http)
+16:19:18.904 INFO  org.apache.juli.logging.DirectJDKLog (restartedMain) [o.a.catalina.core.StandardService] -- Starting service [Tomcat]
+16:19:18.904 INFO  org.apache.juli.logging.DirectJDKLog (restartedMain) [o.a.catalina.core.StandardEngine] -- Starting Servlet engine: [Apache Tomcat/9.0.64]
+16:19:18.931 INFO  org.apache.juli.logging.DirectJDKLog (restartedMain) [o.a.c.c.C.[Tomcat].[localhost].[/]] -- Initializing Spring embedded WebApplicationContext
+16:19:18.931 INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext (restartedMain) [o.s.b.w.s.c.ServletWebServerApplicationContext] -- Root WebApplicationContext: initialization completed in 299 ms
+16:19:18.957 INFO  org.hibernate.jpa.internal.util.LogHelper (restartedMain) [o.h.jpa.internal.util.LogHelper] -- HHH000204: Processing PersistenceUnitInfo [name: default]
+16:19:18.963 INFO  com.zaxxer.hikari.HikariDataSource (restartedMain) [com.zaxxer.hikari.HikariDataSource] -- HikariPool-3 - Starting...
+16:19:18.964 WARN  com.zaxxer.hikari.util.DriverDataSource (restartedMain) [c.z.hikari.util.DriverDataSource] -- Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+16:19:18.978 INFO  com.zaxxer.hikari.HikariDataSource (restartedMain) [com.zaxxer.hikari.HikariDataSource] -- HikariPool-3 - Start completed.
+16:19:18.978 INFO  org.hibernate.dialect.Dialect (restartedMain) [org.hibernate.dialect.Dialect] -- HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+16:19:19.015 INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator (restartedMain) [o.h.e.t.j.p.i.JtaPlatformInitiator] -- HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
