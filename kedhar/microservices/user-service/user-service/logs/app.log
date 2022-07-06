@@ -1,4 +1,4 @@
-13:01:54.248 ERROR org.springframework.test.context.TestContextManager (main) [o.s.test.context.TestContextManager] -- Caught exception while allowing TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener@12448de1] to prepare test instance [com.javafsd.userservice.UserServiceApplicationTests@2b35c7aa]
+13:38:28.687 ERROR org.springframework.test.context.TestContextManager (main) [o.s.test.context.TestContextManager] -- Caught exception while allowing TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener@6dd20ec9] to prepare test instance [com.javafsd.userservice.UserServiceApplicationTests@20dd5870]
 java.lang.IllegalStateException: Failed to load ApplicationContext
 	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:132)
 	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:124)
