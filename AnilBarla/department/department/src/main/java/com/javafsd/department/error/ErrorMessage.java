@@ -11,6 +11,11 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class ErrorMessage {
  
-    private HttpStatus status;
+    public ErrorMessage(HttpStatus status, String message) {
+		super();
+		this.status = status;
+		this.message = message;
+	}
+	private HttpStatus status;
     private String message;
 }
