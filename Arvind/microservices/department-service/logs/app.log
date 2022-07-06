@@ -1,0 +1,42 @@
+10:20:21.145 ERROR org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter (restartedMain) [o.s.b.d.LoggingFailureAnalysisReporter] -- 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 9093 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 9093 or configure this application to listen on another port.
+
+10:22:19.389 ERROR org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter (restartedMain) [o.s.b.d.LoggingFailureAnalysisReporter] -- 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 9093 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 9093 or configure this application to listen on another port.
+
+10:27:02.400 ERROR org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter (restartedMain) [o.s.b.d.LoggingFailureAnalysisReporter] -- 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 9093 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 9093 or configure this application to listen on another port.
+
