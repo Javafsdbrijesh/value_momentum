@@ -6,18 +6,17 @@ import org.springframework.stereotype.Service;
 import com.javafsd.departmentservice.entity.Department;
 import com.javafsd.departmentservice.repository.DepartmentRepository;
 
-
-
 @Service
-public class DepartmentService {
+public class DepartmentServiceImpl {
+	@Autowired
+	private DepartmentRepository departmentRepository;
 
-    @Autowired
-    private DepartmentRepository departmentRepository;
 
-    public Department saveDepartment(Department department) {
-        Department departmentResponse = departmentRepository.save(department);
+	public Department saveDepartment(Department department) {
+		Department departmentResponse = departmentRepository.save(department);
+		return departmentResponse;
+	}
 
-        return departmentResponse;
-    }
+	
 
 }

@@ -1,5 +1,4 @@
-package com.javafsd.departmentservice.entity;
-
+package com.javafsd.userservice.entity;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -15,20 +14,24 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@Table(name="department")
-public class Department {
+@Table(name="user")
+public class User {
+	//firstName, lastName, email, contact.
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	@Column(name="department_id")
-	private long departmentId;
+	@Column(name="user_id")
+	private long userId;
 	
-	@Column(name="department_name")
-	private String departmentName;
+	@Column(name="first_name")
+	private String firstName;
 	
-	@Column(name="department_address")
-	private String departmentAddress;
+	@Column(name="last_name")
+	private String lastName;
 	
-	@Column(name="department_code")
-	private String departmentCode; 
+	@Column(name="user_email")
+	private String email; 
+	
+	@Column(name="user_code")
+	private long contact; 
 	
 }
