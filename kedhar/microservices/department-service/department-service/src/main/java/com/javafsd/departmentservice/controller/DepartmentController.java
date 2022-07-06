@@ -9,19 +9,17 @@ import org.springframework.web.bind.annotation.RestController;
 import com.javafsd.departmentservice.entity.Department;
 import com.javafsd.departmentservice.service.DepartmentService;
 
-
 @RestController
 @RequestMapping("/departments")
 public class DepartmentController {
-
-
-    @Autowired
-    private DepartmentService departmentServices;
-
-    @PostMapping("/")
-    public Department saveDepartment(@RequestBody Department department) {
-        Department departmentResponse = departmentServices.saveDepartment(department);
-        return departmentResponse;
-    }
+	@Autowired
+	private DepartmentService departmentService;
+	
+	@PostMapping("/values")
+	public Department saveDepartment(@RequestBody Department department) {
+		Department departmentResponse=departmentService.saveDepartment(department);
+		return departmentResponse;
+		
+	}
 
 }
