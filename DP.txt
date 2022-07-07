@@ -1,0 +1,8 @@
+Public Class Test
+{
+public static void main(string args[])
+{
+StringBuffer sb = new StringBuffer("Manohar");
+System.out.println(sb.capacity());
+}
+}
