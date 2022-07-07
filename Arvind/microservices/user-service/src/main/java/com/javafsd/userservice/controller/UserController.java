@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+
 import com.javafsd.userservice.entity.User;
 import com.javafsd.userservice.error.UserNotFoundException;
 import com.javafsd.userservice.entity.User;
@@ -36,7 +37,7 @@ public class UserController {
 		return userList;
 	}
 	@GetMapping("/{id}")
-	 public User fetchDepartmentById(@PathVariable("id") Long userId) throws UserNotFoundException{
+	 public User UserById(@PathVariable("id") Long userId) throws UserNotFoundException{
        LOGGER.info("Inside fetchDepartmentById method");
        User user = userServiceImpl.getUserById(userId);        
        LOGGER.info("Inside fetchDepartmentById method, Response : " + user);
