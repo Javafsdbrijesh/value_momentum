@@ -5,6 +5,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
  
 
@@ -28,8 +29,9 @@ public class Department {
 	}
 
 	@Id
-    @GeneratedValue(strategy = GenerationType.AUTO)    
-    @Column(name="department_id")
+	@GeneratedValue(strategy = GenerationType.SEQUENCE,generator="department_generator")
+	@SequenceGenerator(name="department_generator", sequenceName="department_seq", allocationSize=50)
+	@Column(name="department_id", updatable=false, nullable=false)
     private long departmentId;
 
     @Column(name="department_name")
