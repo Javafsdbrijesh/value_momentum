@@ -5,6 +5,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
 @Entity
@@ -14,9 +15,9 @@ public class User {
 	
 
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
-	
-	@Column(name="user_id")
+	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "user_generator")
+	@SequenceGenerator(name="user_generator", sequenceName = "user_seq", allocationSize=50)
+	@Column(name="user_id", updatable = false, nullable = false)
 	private long userId;
 	
 	@Column(name="first_Name")
@@ -47,11 +48,9 @@ public class User {
 		this.departmentId = departmentId;
 	}
 
+
+
 	public User() {
-		super();
-		// TODO Auto-generated constructor stub
-		
-		
 	}
 
 	public User(long userId, String firstName, String lastName, String email, String contact) {
@@ -101,6 +100,12 @@ public class User {
 
 	public void setContact(String contact) {
 		this.contact = contact;
+	}
+
+	@Override
+	public String toString() {
+		return "User [userId=" + userId + ", firstName=" + firstName + ", lastName=" + lastName + ", email=" + email
+				+ ", contact=" + contact + ", departmentId=" + departmentId + "]";
 	}
 }
 

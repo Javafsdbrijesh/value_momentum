@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.javafsd.userservice.entity.User;
 import com.javafsd.userservice.impl.UserService;
 import com.javafsd.userservice.service.Userservice;
+import com.javafsd.userservice.vo.ResponseTemplateView;
 
 
 @RestController
@@ -35,9 +36,9 @@ public class UserController {
 	    }
 	    
 		@GetMapping("/{id}")
-		public User getuserById(@PathVariable("id") Long userId) {
-			User userResp = userService.getUserById(userId);
-			return userResp;
+		public ResponseTemplateView getuserById(@PathVariable("id") Long userId) {
+			ResponseTemplateView responseTemplateView = userService.getUserById(userId);
+			return responseTemplateView;
 			
 		}
 		

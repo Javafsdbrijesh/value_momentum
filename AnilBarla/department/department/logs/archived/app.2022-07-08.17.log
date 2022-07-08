@@ -1,0 +1,60 @@
+13:26:42.744 INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver (restartedMain) [c.n.d.s.r.aws.ConfigClusterResolver]
+				-- Resolving eureka endpoints via configuration
+13:26:42.785 INFO  com.netflix.discovery.DiscoveryClient (restartedMain) [c.netflix.discovery.DiscoveryClient]
+				-- Disable delta property : false
+13:26:42.786 INFO  com.netflix.discovery.DiscoveryClient (restartedMain) [c.netflix.discovery.DiscoveryClient]
+				-- Single vip registry refresh property : null
+13:26:42.786 INFO  com.netflix.discovery.DiscoveryClient (restartedMain) [c.netflix.discovery.DiscoveryClient]
+				-- Force full registry fetch : false
+13:26:42.786 INFO  com.netflix.discovery.DiscoveryClient (restartedMain) [c.netflix.discovery.DiscoveryClient]
+				-- Application is null : false
+13:26:42.787 INFO  com.netflix.discovery.DiscoveryClient (restartedMain) [c.netflix.discovery.DiscoveryClient]
+				-- Registered Applications size is zero : true
+13:26:42.787 INFO  com.netflix.discovery.DiscoveryClient (restartedMain) [c.netflix.discovery.DiscoveryClient]
+				-- Application version is -1: true
+13:26:42.787 INFO  com.netflix.discovery.DiscoveryClient (restartedMain) [c.netflix.discovery.DiscoveryClient]
+				-- Getting all instance registry info from the eureka server
+13:26:43.107 INFO  com.netflix.discovery.DiscoveryClient (restartedMain) [c.netflix.discovery.DiscoveryClient]
+				-- The response status is 200
+13:26:43.111 INFO  com.netflix.discovery.DiscoveryClient (restartedMain) [c.netflix.discovery.DiscoveryClient]
+				-- Starting heartbeat executor: renew interval is: 30
+13:26:43.114 INFO  com.netflix.discovery.InstanceInfoReplicator (restartedMain) [c.n.discovery.InstanceInfoReplicator]
+				-- InstanceInfoReplicator onDemand update allowed rate per min is 4
+13:26:43.118 INFO  com.netflix.discovery.DiscoveryClient (restartedMain) [c.netflix.discovery.DiscoveryClient]
+				-- Discovery Client initialized at timestamp 1657267003117 with initial instances count: 1
+13:26:43.120 INFO  org.springframework.cloud.netflix.eureka.serviceregistry.EurekaServiceRegistry (restartedMain) [o.s.c.n.e.s.EurekaServiceRegistry]
+				-- Registering application DEPARTMENT-SERVICE with eureka with status UP
+13:26:43.121 INFO  com.netflix.discovery.DiscoveryClient$3 (restartedMain) [c.netflix.discovery.DiscoveryClient]
+				-- Saw local status change event StatusChangeEvent [timestamp=1657267003121, current=UP, previous=STARTING]
+13:26:43.124 INFO  com.netflix.discovery.DiscoveryClient (DiscoveryClient-InstanceInfoReplicator-0) [c.netflix.discovery.DiscoveryClient]
+				-- DiscoveryClient_DEPARTMENT-SERVICE/VSP-JSZ3JL3:DEPARTMENT-SERVICE:8087: registering service...
+13:26:43.162 INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer (restartedMain) [o.s.b.w.e.tomcat.TomcatWebServer]
+				-- Tomcat started on port(s): 8087 (http) with context path ''
+13:26:43.163 INFO  org.springframework.cloud.netflix.eureka.serviceregistry.EurekaAutoServiceRegistration (restartedMain) [o.s.c.n.e.s.EurekaAutoServiceRegistration]
+				-- Updating port to 8087
+13:26:43.184 INFO  com.netflix.discovery.DiscoveryClient (DiscoveryClient-InstanceInfoReplicator-0) [c.netflix.discovery.DiscoveryClient]
+				-- DiscoveryClient_DEPARTMENT-SERVICE/VSP-JSZ3JL3:DEPARTMENT-SERVICE:8087 - registration status: 204
+13:26:43.377 INFO  org.springframework.boot.StartupInfoLogger (restartedMain) [c.j.department.DepartmentApplication]
+				-- Started DepartmentApplication in 7.361 seconds (JVM running for 8.205)
+13:28:38.172 INFO  org.apache.juli.logging.DirectJDKLog (http-nio-8087-exec-1) [o.a.c.c.C.[Tomcat].[localhost].[/]]
+				-- Initializing Spring DispatcherServlet 'dispatcherServlet'
+13:28:38.173 INFO  org.springframework.web.servlet.FrameworkServlet (http-nio-8087-exec-1) [o.s.web.servlet.DispatcherServlet]
+				-- Initializing Servlet 'dispatcherServlet'
+13:28:38.175 INFO  org.springframework.web.servlet.FrameworkServlet (http-nio-8087-exec-1) [o.s.web.servlet.DispatcherServlet]
+				-- Completed initialization in 2 ms
+13:28:38.218 INFO  com.javafsd.department.controller.DepartmentController (http-nio-8087-exec-1) [c.j.d.c.DepartmentController]
+				-- Inside fetchDepartmentById method
+13:28:38.302 INFO  com.javafsd.department.controller.DepartmentController (http-nio-8087-exec-1) [c.j.d.c.DepartmentController]
+				-- Inside fetchDepartmentById method, Response : Department(departmentId=6, departmentName=Dean, departmentAddress=Noida, departmentCode=De232)
+13:43:24.770 INFO  org.springframework.boot.StartupInfoLogger (restartedMain) [c.j.department.DepartmentApplication]
+				-- Starting DepartmentApplication using Java 11.0.8 on VSP-JSZ3JL3 with PID 40744 (C:\Valuemomentum\AnilBarla\department\department\target\classes started by AnilBarla in C:\Valuemomentum\AnilBarla\department\department)
+13:43:24.775 INFO  org.springframework.boot.SpringApplication (restartedMain) [c.j.department.DepartmentApplication]
+				-- The following 1 profile is active: "dev"
+13:43:24.854 WARN  org.springframework.boot.logging.DeferredLog (restartedMain) [o.s.b.c.config.ConfigDataEnvironment]
+				-- Property 'spring.profiles' imported from location 'class path resource [application.yml]' is invalid and should be replaced with 'spring.config.activate.on-profile' [origin: class path resource [application.yml] - 51:13]
+13:43:24.854 WARN  org.springframework.boot.logging.DeferredLog (restartedMain) [o.s.b.c.config.ConfigDataEnvironment]
+				-- Property 'spring.profiles' imported from location 'class path resource [application.yml]' is invalid and should be replaced with 'spring.config.activate.on-profile' [origin: class path resource [application.yml] - 36:13]
+13:43:24.857 INFO  org.springframework.boot.logging.DeferredLog (restartedMain) [o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor]
+				-- Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+13:43:24.857 INFO  org.springframework.boot.logging.DeferredLog (restartedMain) [o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor]
+				-- For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'

@@ -8,6 +8,8 @@ logging:
 spring :
   profiles:
     active: dev
+  application:
+    name: DEPARTMENT-SERVICE
 
 ---
 
@@ -56,3 +58,13 @@ spring:
     show-sql: true
     hibernate:
      ddl-auto: update 
+
+
+eureka:
+ client:
+  registry-with-eureka: true
+  fetch-registry: true
+  service-url:
+   defaultZone: http://localhost:8761/eureka/
+instace:
+ hostname: localhost
