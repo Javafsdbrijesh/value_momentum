@@ -5,7 +5,8 @@ import org.springframework.stereotype.Repository;
 
 import com.javafsd.departmentservice.entity.Department;
 
+
 @Repository
-public interface DepartmentRepository extends JpaRepository<Department, Long>{
+public interface DepartmentRepository extends JpaRepository<Department , Long> {
 
 }

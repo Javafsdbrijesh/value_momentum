@@ -7,16 +7,15 @@ import com.javafsd.departmentservice.entity.Department;
 import com.javafsd.departmentservice.repository.DepartmentRepository;
 
 @Service
-public class DepartmentServiceImpl {
-	@Autowired
-	private DepartmentRepository departmentRepository;
+public class DepartmentService {
 
+    @Autowired
+    private DepartmentRepository departmentRepository;
 
-	public Department saveDepartment(Department department) {
-		Department departmentResponse = departmentRepository.save(department);
-		return departmentResponse;
-	}
+    public Department saveDepartment(Department department) {
+        Department departmentResponse = departmentRepository.save(department);
 
-	
+        return departmentResponse;
+    }
 
 }
