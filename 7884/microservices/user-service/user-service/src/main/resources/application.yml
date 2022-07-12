@@ -1,5 +1,5 @@
 server:
- port: 9092
+ port: 8083
 
 
 logging:
@@ -10,7 +10,7 @@ spring :
  profiles:
    active: dev
  application:
-   name: DEPARTMENT-SERVICE
+   name: USER-SERVICE
 
 
 
@@ -60,6 +60,7 @@ spring:
     show-sql: true
     hibernate:
      ddl-auto: update
+
 
 eureka:
  client:
