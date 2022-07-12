@@ -1,2 +1,1 @@
-11:38:03.017 INFO  org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener (restartedMain) [o.s.b.d.a.ConditionEvaluationDeltaLoggingListener] -- Condition evaluation unchanged
-11:43:02.596 INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver (AsyncResolver-bootstrap-executor-0) [c.n.d.s.r.aws.ConfigClusterResolver] -- Resolving eureka endpoints via configuration
+17:34:43.010 INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver (AsyncResolver-bootstrap-executor-0) [c.n.d.s.r.aws.ConfigClusterResolver] -- Resolving eureka endpoints via configuration
