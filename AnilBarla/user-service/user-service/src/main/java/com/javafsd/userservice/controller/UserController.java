@@ -12,8 +12,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.javafsd.userservice.entity.User;
+import com.javafsd.userservice.feign.client.DepartmentClient;
 import com.javafsd.userservice.impl.UserService;
 import com.javafsd.userservice.service.Userservice;
+import com.javafsd.userservice.vo.DepartmentView;
 import com.javafsd.userservice.vo.ResponseTemplateView;
 
 
@@ -24,12 +26,15 @@ public class UserController {
 	@Autowired
 	private UserService userService;
 	
+	@Autowired
+	public DepartmentClient departmentClient;
+	
 	@PostMapping("/")
 	public User saveUser(@RequestBody User user) {
 		User userResponse=userService.saveUser(user);
 		return userResponse;
 	}
-	   @GetMapping("/")
+	   @GetMapping("//")
 	    public List<User> findUsers(){
 	        List<User> userList = userService.getUsers();
 	        return userList;
@@ -47,6 +52,12 @@ public class UserController {
 		        userService.deleteUserById(userId);
 		        return "User deleted successfully for User Id" + userId;
 		    }
+		 
+		 @GetMapping("/")
+		 public List<DepartmentView> getAllDepartments(){
+			return departmentClient.findDepartments();
+			 
+		 }
 	
  
 	}

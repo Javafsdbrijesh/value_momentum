@@ -1,10 +1,50 @@
-13:53:33.938 INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver (AsyncResolver-bootstrap-executor-0) [c.n.d.s.r.aws.ConfigClusterResolver]
+11:14:45.863 INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver (restartedMain) [c.n.d.s.r.aws.ConfigClusterResolver]
 				-- Resolving eureka endpoints via configuration
-14:53:04.977 WARN  com.zaxxer.hikari.pool.HikariPool$HouseKeeper (HikariPool-1 housekeeper) [com.zaxxer.hikari.pool.HikariPool]
-				-- HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=55m41s359ms450µs).
-14:53:38.877 INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver (AsyncResolver-bootstrap-executor-0) [c.n.d.s.r.aws.ConfigClusterResolver]
-				-- Resolving eureka endpoints via configuration
-14:58:38.881 INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver (AsyncResolver-bootstrap-executor-0) [c.n.d.s.r.aws.ConfigClusterResolver]
-				-- Resolving eureka endpoints via configuration
-15:03:38.894 INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver (AsyncResolver-bootstrap-executor-0) [c.n.d.s.r.aws.ConfigClusterResolver]
-				-- Resolving eureka endpoints via configuration
+11:14:45.910 INFO  com.netflix.discovery.DiscoveryClient (restartedMain) [c.netflix.discovery.DiscoveryClient]
+				-- Disable delta property : false
+11:14:45.911 INFO  com.netflix.discovery.DiscoveryClient (restartedMain) [c.netflix.discovery.DiscoveryClient]
+				-- Single vip registry refresh property : null
+11:14:45.911 INFO  com.netflix.discovery.DiscoveryClient (restartedMain) [c.netflix.discovery.DiscoveryClient]
+				-- Force full registry fetch : false
+11:14:45.912 INFO  com.netflix.discovery.DiscoveryClient (restartedMain) [c.netflix.discovery.DiscoveryClient]
+				-- Application is null : false
+11:14:45.912 INFO  com.netflix.discovery.DiscoveryClient (restartedMain) [c.netflix.discovery.DiscoveryClient]
+				-- Registered Applications size is zero : true
+11:14:45.913 INFO  com.netflix.discovery.DiscoveryClient (restartedMain) [c.netflix.discovery.DiscoveryClient]
+				-- Application version is -1: true
+11:14:45.913 INFO  com.netflix.discovery.DiscoveryClient (restartedMain) [c.netflix.discovery.DiscoveryClient]
+				-- Getting all instance registry info from the eureka server
+11:14:46.277 INFO  com.netflix.discovery.DiscoveryClient (restartedMain) [c.netflix.discovery.DiscoveryClient]
+				-- The response status is 200
+11:14:46.281 INFO  com.netflix.discovery.DiscoveryClient (restartedMain) [c.netflix.discovery.DiscoveryClient]
+				-- Starting heartbeat executor: renew interval is: 30
+11:14:46.285 INFO  com.netflix.discovery.InstanceInfoReplicator (restartedMain) [c.n.discovery.InstanceInfoReplicator]
+				-- InstanceInfoReplicator onDemand update allowed rate per min is 4
+11:14:46.293 INFO  com.netflix.discovery.DiscoveryClient (restartedMain) [c.netflix.discovery.DiscoveryClient]
+				-- Discovery Client initialized at timestamp 1657604686292 with initial instances count: 2
+11:14:46.296 INFO  org.springframework.cloud.netflix.eureka.serviceregistry.EurekaServiceRegistry (restartedMain) [o.s.c.n.e.s.EurekaServiceRegistry]
+				-- Registering application DEPARTMENT-SERVICE with eureka with status UP
+11:14:46.297 INFO  com.netflix.discovery.DiscoveryClient$3 (restartedMain) [c.netflix.discovery.DiscoveryClient]
+				-- Saw local status change event StatusChangeEvent [timestamp=1657604686297, current=UP, previous=STARTING]
+11:14:46.299 INFO  com.netflix.discovery.DiscoveryClient (DiscoveryClient-InstanceInfoReplicator-0) [c.netflix.discovery.DiscoveryClient]
+				-- DiscoveryClient_DEPARTMENT-SERVICE/VSP-JSZ3JL3.bbrouter:DEPARTMENT-SERVICE:8087: registering service...
+11:14:46.334 INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer (restartedMain) [o.s.b.w.e.tomcat.TomcatWebServer]
+				-- Tomcat started on port(s): 8087 (http) with context path ''
+11:14:46.336 INFO  org.springframework.cloud.netflix.eureka.serviceregistry.EurekaAutoServiceRegistration (restartedMain) [o.s.c.n.e.s.EurekaAutoServiceRegistration]
+				-- Updating port to 8087
+11:14:46.366 INFO  com.netflix.discovery.DiscoveryClient (DiscoveryClient-InstanceInfoReplicator-0) [c.netflix.discovery.DiscoveryClient]
+				-- DiscoveryClient_DEPARTMENT-SERVICE/VSP-JSZ3JL3.bbrouter:DEPARTMENT-SERVICE:8087 - registration status: 204
+11:14:46.596 INFO  org.springframework.boot.StartupInfoLogger (restartedMain) [c.j.department.DepartmentApplication]
+				-- Started DepartmentApplication in 9.205 seconds (JVM running for 10.292)
+11:15:48.616 INFO  org.apache.juli.logging.DirectJDKLog (http-nio-8087-exec-1) [o.a.c.c.C.[Tomcat].[localhost].[/]]
+				-- Initializing Spring DispatcherServlet 'dispatcherServlet'
+11:15:48.617 INFO  org.springframework.web.servlet.FrameworkServlet (http-nio-8087-exec-1) [o.s.web.servlet.DispatcherServlet]
+				-- Initializing Servlet 'dispatcherServlet'
+11:15:48.621 INFO  org.springframework.web.servlet.FrameworkServlet (http-nio-8087-exec-1) [o.s.web.servlet.DispatcherServlet]
+				-- Completed initialization in 3 ms
+11:15:48.677 INFO  com.javafsd.department.controller.DepartmentController (http-nio-8087-exec-1) [c.j.d.c.DepartmentController]
+				-- Inside findDepartments method
+11:16:06.700 INFO  com.javafsd.department.controller.DepartmentController (http-nio-8087-exec-2) [c.j.d.c.DepartmentController]
+				-- Inside fetchDepartmentById method
+11:16:06.718 INFO  com.javafsd.department.controller.DepartmentController (http-nio-8087-exec-2) [c.j.d.c.DepartmentController]
+				-- Inside fetchDepartmentById method, Response : com.javafsd.department.entity.Department@21840940
