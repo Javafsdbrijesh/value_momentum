@@ -1,18 +1,2 @@
-20:35:58.408 INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver (AsyncResolver-bootstrap-executor-0) [c.n.d.s.r.aws.ConfigClusterResolver] -- Resolving eureka endpoints via configuration
-20:40:58.416 INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver (AsyncResolver-bootstrap-executor-0) [c.n.d.s.r.aws.ConfigClusterResolver] -- Resolving eureka endpoints via configuration
-20:45:58.427 INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver (AsyncResolver-bootstrap-executor-0) [c.n.d.s.r.aws.ConfigClusterResolver] -- Resolving eureka endpoints via configuration
-20:50:58.441 INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver (AsyncResolver-bootstrap-executor-0) [c.n.d.s.r.aws.ConfigClusterResolver] -- Resolving eureka endpoints via configuration
-20:55:58.453 INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver (AsyncResolver-bootstrap-executor-0) [c.n.d.s.r.aws.ConfigClusterResolver] -- Resolving eureka endpoints via configuration
-21:00:10.433 INFO  org.apache.juli.logging.DirectJDKLog (http-nio-9093-exec-1) [o.a.c.c.C.[Tomcat].[localhost].[/]] -- Initializing Spring DispatcherServlet 'dispatcherServlet'
-21:00:10.433 INFO  org.springframework.web.servlet.FrameworkServlet (http-nio-9093-exec-1) [o.s.web.servlet.DispatcherServlet] -- Initializing Servlet 'dispatcherServlet'
-21:00:10.435 INFO  org.springframework.web.servlet.FrameworkServlet (http-nio-9093-exec-1) [o.s.web.servlet.DispatcherServlet] -- Completed initialization in 1 ms
-21:00:58.466 INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver (AsyncResolver-bootstrap-executor-0) [c.n.d.s.r.aws.ConfigClusterResolver] -- Resolving eureka endpoints via configuration
-21:09:15.271 WARN  com.zaxxer.hikari.pool.HikariPool$HouseKeeper (HikariPool-1 housekeeper) [com.zaxxer.hikari.pool.HikariPool] -- HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=4m48s976ms47µs900ns).
-21:10:17.432 INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver (AsyncResolver-bootstrap-executor-0) [c.n.d.s.r.aws.ConfigClusterResolver] -- Resolving eureka endpoints via configuration
-21:15:17.433 INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver (AsyncResolver-bootstrap-executor-0) [c.n.d.s.r.aws.ConfigClusterResolver] -- Resolving eureka endpoints via configuration
-21:20:17.436 INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver (AsyncResolver-bootstrap-executor-0) [c.n.d.s.r.aws.ConfigClusterResolver] -- Resolving eureka endpoints via configuration
-21:25:17.438 INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver (AsyncResolver-bootstrap-executor-0) [c.n.d.s.r.aws.ConfigClusterResolver] -- Resolving eureka endpoints via configuration
-21:30:17.439 INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver (AsyncResolver-bootstrap-executor-0) [c.n.d.s.r.aws.ConfigClusterResolver] -- Resolving eureka endpoints via configuration
-21:35:17.446 INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver (AsyncResolver-bootstrap-executor-0) [c.n.d.s.r.aws.ConfigClusterResolver] -- Resolving eureka endpoints via configuration
-21:40:17.449 INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver (AsyncResolver-bootstrap-executor-0) [c.n.d.s.r.aws.ConfigClusterResolver] -- Resolving eureka endpoints via configuration
-21:45:17.450 INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver (AsyncResolver-bootstrap-executor-0) [c.n.d.s.r.aws.ConfigClusterResolver] -- Resolving eureka endpoints via configuration
+11:38:03.017 INFO  org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener (restartedMain) [o.s.b.d.a.ConditionEvaluationDeltaLoggingListener] -- Condition evaluation unchanged
+11:43:02.596 INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver (AsyncResolver-bootstrap-executor-0) [c.n.d.s.r.aws.ConfigClusterResolver] -- Resolving eureka endpoints via configuration

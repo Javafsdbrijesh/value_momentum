@@ -15,7 +15,9 @@ import org.springframework.web.bind.annotation.RestController;
 
 
 import com.javafsd.userservice.entity.User;
+import com.javafsd.userservice.feign.DepartmentClient;
 import com.javafsd.userservice.service.Impl.UserService;
+import com.javafsd.userservice.vo.DepartmentView;
 import com.javafsd.userservice.vo.ResponseTemplateView;
 
 
@@ -26,13 +28,19 @@ public class UserController {
 
     @Autowired
     private UserService userService;
+    @Autowired
+    public DepartmentClient departmentClient;
+    @GetMapping("/")
+    public List<DepartmentView> getAllDepartments(){
+        return departmentClient.findDepartments();
+    }
 
     @PostMapping("/")
     public User saveUser(@RequestBody User user) {
         User userResponse=userService.saveUser(user);
         return userResponse;
     }
-       @GetMapping("/")
+       @GetMapping("//")
         public List<User> findUsers(){
             List<User> userList = userService.getUsers();
             return userList;
