@@ -48,3 +48,7 @@
 				-- Inside fetchDepartmentById method
 11:16:06.718 INFO  com.javafsd.department.controller.DepartmentController (http-nio-8087-exec-2) [c.j.d.c.DepartmentController]
 				-- Inside fetchDepartmentById method, Response : com.javafsd.department.entity.Department@21840940
+11:16:12.734 INFO  com.javafsd.department.controller.DepartmentController (http-nio-8087-exec-3) [c.j.d.c.DepartmentController]
+				-- Inside findDepartments method
+11:19:45.929 INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver (AsyncResolver-bootstrap-executor-0) [c.n.d.s.r.aws.ConfigClusterResolver]
+				-- Resolving eureka endpoints via configuration
