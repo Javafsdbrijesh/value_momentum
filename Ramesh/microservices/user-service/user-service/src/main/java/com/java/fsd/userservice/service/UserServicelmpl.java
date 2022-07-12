@@ -17,7 +17,7 @@ import com.javafsd.userservice.service.Impl.UserService;
 
  
 @Service
-public class UserServiceImpl implements UserService{
+public class UserServicelmpl implements UserService{
 
     @Autowired 
     private UserRepository UserRepository;
