@@ -2,9 +2,11 @@ package com.javafsd.userservice.entity;
 
 import javax.persistence.Entity;
 
+
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 import javax.persistence.Column;
 //import lombok.AllArgsConstructor;
@@ -12,118 +14,101 @@ import javax.persistence.Column;
 //import lombok.NoArgsConstructor;
 
 @Entity
-//@Data
-//@AllArgsConstructor
-//@NoArgsConstructor
-@Table(name ="User")
+@Table(name="user")
 public class User {
 
-	@Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-	@Column(name = "user_id")
-    private String userId;
-	
-    @Column(name = "user_firstname")
-    private String userFirstname;
 
-    @Column(name = "user_lastname")
-    private String userLastname;
+    @Id
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "user_generator")
+    @SequenceGenerator(name="user_generator", sequenceName = "user_seq", allocationSize=50)
+    @Column(name="user_id", updatable = false, nullable = false)
+    private long userId;
 
-    @Column(name = "email")
-    private String Email;
+    @Column(name="first_Name")
+    private String firstName;
 
-    @Column(name = "contact")
-    private long Contact;
+    @Column(name="last_Name")
+    private String lastName;
 
-	/**
-	 * @return the userId
-	 */
-	public String getUserId() {
-		return userId;
-	}
+    @Column(name="email")
+    private String email;
 
-	/**
-	 * @param userId the userId to set
-	 */
-	public void setUserId(String userId) {
-		this.userId = userId;
-	}
+    @Column(name="contact")
+    private String contact;
 
-	/**
-	 * @return the userFirstname
-	 */
-	public String getUserFirstname() {
-		return userFirstname;
-	}
+    @Column(name="department_id")
+    private Long departmentId;
 
-	/**
-	 * @param userFirstname the userFirstname to set
-	 */
-	public void setUserFirstname(String userFirstname) {
-		this.userFirstname = userFirstname;
-	}
+    public Long getDepartmentId() {
+        return departmentId;
+    }
 
-	/**
-	 * @return the userLastname
-	 */
-	public String getUserLastname() {
-		return userLastname;
-	}
+    public void setDepartmentId(Long departmentId) {
+        this.departmentId = departmentId;
+    }
 
-	/**
-	 * @param userLastname the userLastname to set
-	 */
-	public void setUserLastname(String userLastname) {
-		this.userLastname = userLastname;
-	}
+    public User(Long departmentId) {
+        super();
+        this.departmentId = departmentId;
+    }
 
-	/**
-	 * @return the email
-	 */
-	public String getEmail() {
-		return Email;
-	}
+    public User() {
+    }
 
-	/**
-	 * @param email the email to set
-	 */
-	public void setEmail(String email) {
-		Email = email;
-	}
+    public User(long userId, String firstName, String lastName, String email, String contact) {
+        super();
+        this.userId = userId;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.email = email;
+        this.contact = contact;
+    }
 
-	/**
-	 * @return the contact
-	 */
-	public Long getContact() {
-		return Contact;
-	}
+    public long getUserId() {
+        return userId;
+    }
 
-	/**
-	 * @param contact the contact to set
-	 */
-	public void setContact(long contact) {
-		Contact = contact;
-	}
+    public void setUserId(long userId) {
+        this.userId = userId;
+    }
 
-	public User(String userId, String userFirstname, String userLastname, String email, long contact) {
-		super();
-		this.userId = userId;
-		this.userFirstname = userFirstname;
-		this.userLastname = userLastname;
-		Email = email;
-		Contact = contact;
-	}
+    public String getFirstName() {
+        return firstName;
+    }
 
-	public User() {
-		
-	}
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
 
-	@Override
-	public String toString() {
-		return "User [userId=" + userId + ", userFirstname=" + userFirstname + ", userLastname=" + userLastname
-				+ ", Email=" + Email + ", Contact=" + Contact + "]";
-	}
+    public String getLastName() {
+        return lastName;
+    }
 
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getContact() {
+        return contact;
+    }
+
+    public void setContact(String contact) {
+        this.contact = contact;
+    }
+
+    @Override
+    public String toString() {
+        return "User [userId=" + userId + ", firstName=" + firstName + ", lastName=" + lastName + ", email=" + email
+                + ", contact=" + contact + ", departmentId=" + departmentId + "]";
+    }
 }
 
 
