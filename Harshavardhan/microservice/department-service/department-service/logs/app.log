@@ -1,9 +1,10 @@
-17:37:42.875 WARN  org.springframework.context.support.AbstractApplicationContext (restartedMain) [o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext] -- Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is org.hibernate.service.spi.ServiceException: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment]
-17:37:42.883 INFO  org.apache.juli.logging.DirectJDKLog (restartedMain) [o.a.catalina.core.StandardService] -- Stopping service [Tomcat]
-17:37:42.894 INFO  org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener (restartedMain) [o.s.b.a.l.ConditionEvaluationReportLoggingListener] -- 
+16:30:10.585 ERROR org.springframework.orm.jpa.AbstractEntityManagerFactoryBean (restartedMain) [o.s.o.j.LocalContainerEntityManagerFactoryBean] -- Failed to initialize JPA EntityManagerFactory: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment]
+16:30:10.589 WARN  org.springframework.context.support.AbstractApplicationContext (restartedMain) [o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext] -- Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is org.hibernate.service.spi.ServiceException: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment]
+16:30:10.593 INFO  org.apache.juli.logging.DirectJDKLog (restartedMain) [o.a.catalina.core.StandardService] -- Stopping service [Tomcat]
+16:30:10.608 INFO  org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener (restartedMain) [o.s.b.a.l.ConditionEvaluationReportLoggingListener] -- 
 
 Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
-17:37:42.914 ERROR org.springframework.boot.SpringApplication (restartedMain) [o.s.boot.SpringApplication] -- Application run failed
+16:30:10.628 ERROR org.springframework.boot.SpringApplication (restartedMain) [o.s.boot.SpringApplication] -- Application run failed
 org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is org.hibernate.service.spi.ServiceException: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment]
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1804)
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620)
@@ -21,7 +22,7 @@ org.springframework.beans.factory.BeanCreationException: Error creating bean wit
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
-	at com.javafsd.departmentservice.DepartmentServiceApplication.main(DepartmentServiceApplication.java:10)
+	at com.javafsd.departmentservice.DepartmentServiceApplication.main(DepartmentServiceApplication.java:12)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)

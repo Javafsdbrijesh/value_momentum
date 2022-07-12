@@ -1,93 +1,113 @@
 package com.javafsd.userservice.entity;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
-
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
-import javax.persistence.Column;
-
 
 @Entity
-@Table(name ="User")
+@Table(name="user")
 public class User {
+	@Id
+	@GeneratedValue(strategy = GenerationType.SEQUENCE,generator="user_generator")
+	@SequenceGenerator(name="user_generator", sequenceName="user_seq", allocationSize=50)
+	@Column(name="user_id", updatable=false, nullable=false)
+	private long userId;
+	
+	@Column(name="user_firstname")
+	private String firstName;
+	
+	@Column(name="user_lastname")
+	private String lastName;
+	
+	@Column(name="user_email")
+	private String email;
+	
+	@Column(name="user_contact")
+	private long contact;
+	
+	@Column(name="department_id")
+	private long departmentId;
+	
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name="user_id")
-    private Long userId;
 
-    @Column(name="first_name")
-    private String firstName;
 
-    @Column(name="last_name")
-    private String lastName;
+	public User() {
+	
+	}
 
-    @Column(name="email")
-    private String email;
 
-    @Column(name="department_id")
-    private Long departmentId;
 
-    public Long getUserId() {
-        return userId;
-    }
+	public User(long userId, String firstName, String lastName, String email, long contact, long departmentId) {
+		super();
+		this.userId = userId;
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.email = email;
+		this.contact = contact;
+		this.departmentId = departmentId;
+	}
 
-    public void setUserId(Long userId) {
-        this.userId = userId;
-    }
+	
+	@Override
+	public String toString() {
+		return "User [userId=" + userId + ", firstName=" + firstName + ", lastName=" + lastName + ", email=" + email
+				+ ", contact=" + contact + ", departmentId=" + departmentId + "]";
+	}
+	
 
-    public String getFirstName() {
-        return firstName;
-    }
+	public long getUserId() {
+		return userId;
+	}
 
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
-    }
+	public void setUserId(long userId) {
+		this.userId = userId;
+	}
 
-    public String getLastName() {
-        return lastName;
-    }
+	public String getFirstName() {
+		return firstName;
+	}
 
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
-    }
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
+	}
 
-    public String getEmail() {
-        return email;
-    }
+	public String getLastName() {
+		return lastName;
+	}
 
-    public void setEmail(String email) {
-        this.email = email;
-    }
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
+	}
 
-    public Long getDepartmentId() {
-        return departmentId;
-    }
+	public String getEmail() {
+		return email;
+	}
 
-    public void setDepartmentId(Long departmentId) {
-        this.departmentId = departmentId;
-    }
+	public void setEmail(String email) {
+		this.email = email;
+	}
 
-    public User(Long userId, String firstName, String lastName, String email, Long departmentId) {
-        super();
-        this.userId = userId;
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.email = email;
-        this.departmentId = departmentId;
-    }
+	public long getContact() {
+		return contact;
+	}
 
-    public User() {
+	public void setContact(long contact) {
+		this.contact = contact;
+	}
 
-    }
+	public long getDepartmentId() {
+		return departmentId;
+	}
 
-    @Override
-    public String toString() {
-        return "User [userId=" + userId + ", firstName=" + firstName + ", lastName=" + lastName + ", email=" + email
-                + ", departmentId=" + departmentId + "]";
-    }
+	public void setDepartmentId(long departmentId) {
+		this.departmentId = departmentId;
+	}
 
+	
+	
 
 }
