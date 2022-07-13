@@ -1,47 +1,54 @@
 package com.javafsd.userservice.service;
 
-import java.util.List;	
-import java.util.Optional;
-
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.web.client.RestTemplate;
 
 import com.javafsd.userservice.entity.User;
-import com.javafsd.userservice.error.UserNotFoundException;
-import com.javafsd.userservice.impl.UserService;
 import com.javafsd.userservice.repository.UserRepository;
+import com.javafsd.userservice.service.Impl.UserService;
+import com.javafsd.userservice.vo.DepartmenView;
+import com.javafsd.userservice.vo.ResponseTemplateView;
 
 @Service
 public class UserServiceImpl implements UserService
 {
-	@Autowired
-	private UserRepository userRepository;
-	private final Logger LOGGER = LoggerFactory.getLogger(UserServiceImpl.class);
-	
-	@Override
-	public User saveUser(User user) 
-	{
-		User userResponse = userRepository.save(user);
-		return userResponse;
-	}
-	
-	@Override
-	public List<User> getUsers() 
-	{
-        List<User> userList = userRepository.findAll();
-        return userList;
+    @Autowired
+    private UserRepository userRepository;
+
+    @Autowired
+    private RestTemplate restTemplate;
+ 
+    @Override
+    public User saveUser(User user) 
+    {
+        User userResp = userRepository.save(user);
+        return userResp;
     }
-	
+   
 	@Override
-	public User getUserById(Long userId) throws UserNotFoundException 
+	public ResponseTemplateView getUserbyId(Long userId) 
 	{
-	        Optional<User> user = userRepository.findById(userId);
-	        if(!user.isPresent()) 
-	        {
-	            throw new UserNotFoundException("User not Available for User Id: " + userId);
-	        }
-	        return user.get();
+		//fetch user details from database based on user id 
+        User userRespFromDB = userRepository.findById(userId).get();
+
+        //Connecting to Department microservice using RestTemplate
+        //fetch department details from department microservice using department id present in userRespFromDB as above.
+        DepartmenView departmenView = restTemplate
+                .getForObject("http://localhost:8080/departmens/"+ userRespFromDB.getDepartmenId(), DepartmenView.class);
+
+        //Create object of ResponseTemplateView
+        ResponseTemplateView responseTemplateView = new ResponseTemplateView();
+
+        //set user details in ResponseTemplateView
+        responseTemplateView.setUser(userRespFromDB);
+
+        //set department details in ResponseTemplateView
+        responseTemplateView.setDepartmenView(departmenView);
+
+        return responseTemplateView;
 	}
+
+	
 }
+

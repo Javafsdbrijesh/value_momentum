@@ -1,26 +1,21 @@
 package com.javafsd.userservice.entity;
 
-import javax.persistence.Column;
+import javax.persistence.Column;			
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
-
 @Entity
-@Data
-@AllArgsConstructor
-@NoArgsConstructor
 @Table(name = "user")
 public class User 
 {
 	@Id //specifies primary key of an entity
-	@GeneratedValue(strategy = GenerationType.AUTO)
-	@Column(name = "user_id")
+	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "user_generator")
+	@SequenceGenerator(name="user_generator", sequenceName = "user_seq", allocationSize=50)
+	@Column(name = "user_id", updatable = false, nullable = false)
 	private long userId;
 	
 	@Column(name = "first_name")
@@ -29,11 +24,14 @@ public class User
 	@Column(name = "last_name")
 	private String lastName;
 	
-	@Column(name = "user_email")
+	@Column(name = "email")
 	private String email;
 	
-	@Column(name = "user_code")
+	@Column(name = "contact")
 	private long contact;
+
+	@Column(name = "departmen_id")
+	private long departmenId;
 
 	public long getUserId() {
 		return userId;
@@ -74,4 +72,34 @@ public class User
 	public void setContact(long contact) {
 		this.contact = contact;
 	}
+
+	public long getDepartmenId() {
+		return departmenId;
+	}
+
+	public void setDepartmenId(long departmenId) {
+		this.departmenId = departmenId;
+	}
+
+	public User() {
+		super();
+	}
+
+	public User(long userId, String firstName, String lastName, String email, long contact, long departmenId) {
+		super();
+		this.userId = userId;
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.email = email;
+		this.contact = contact;
+		this.departmenId = departmenId;
+	}
+
+	@Override
+	public String toString() {
+		return "User [userId=" + userId + ", firstName=" + firstName + ", lastName=" + lastName + ", email=" + email
+				+ ", contact=" + contact + ", departmenId=" + departmenId + "]";
+	}
+	
+	
 }

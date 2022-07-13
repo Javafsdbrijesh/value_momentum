@@ -23,7 +23,6 @@
 		<encoder>
 			<pattern>%d{HH:mm:ss.SSS} %-5level %class \(%thread\) [%logger{36}]
 				-- %msg%n</pattern>
-			s
 		</encoder>
 	</appender>
 

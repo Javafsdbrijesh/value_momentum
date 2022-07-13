@@ -29,6 +29,6 @@ public class Department
 	@Column(name = "department_Address")
 	private String departmentAddress;
 	
-	@Column(name = "department_code")
+	@Column(name = "department_code") 
 	private String departmentCode;
 }
