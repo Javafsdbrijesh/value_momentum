@@ -13,56 +13,59 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-
+ 
 import com.javafsd.departmentservice.entity.Department;
 import com.javafsd.departmentservice.error.DepartmentNotFoundException;
-import com.javafsd.departmentservice.impl.DepartmentService;
-
+import com.javafsd.departmentservice.service.impl.DepartmentService;
+ 
 @RestController
 @RequestMapping("/departments")
 public class DepartmentController {
-	@Autowired
-	private DepartmentService departmentService;
-	private final Logger LOGGER = LoggerFactory.getLogger(DepartmentController.class);
-	
-	@PostMapping("/")
-	public Department saveDepartment(@RequestBody Department department) {
-		//Department departmentResponse=departmentService.saveDepartment(department);
-		return departmentService.saveDepartment(department);
-		
-	}
-	@GetMapping("/")
-	public List<Department> findDepartments(){
-		List<Department> departmentList=departmentService.getDepartments();
-		return departmentList;
-	}
-	
-	@GetMapping("/{id}")
-	 public Department fetchDepartmentById(@PathVariable("id") Long departmentId) throws DepartmentNotFoundException{
+ 
+    @Autowired
+    private DepartmentService departmentService;
+
+    private final Logger LOGGER = LoggerFactory.getLogger(DepartmentController.class);
+ 
+    @PostMapping("/")
+    public Department saveDepartment( @RequestBody Department department) {
+        Department departmentResponse = departmentService.saveDepartment(department);
+        return departmentResponse;
+    }
+ 
+    @GetMapping("/")
+    public List<Department> findDepartments(){
+        LOGGER.debug("Inside findDepartments method");
+        LOGGER.info("Inside findDepartments method");
+        List<Department> departmentList = departmentService.getDepartments();
+        return departmentList;
+    }
+ 
+    @GetMapping("/{id}")
+    public Department fetchDepartmentById(@PathVariable("id") Long departmentId) throws DepartmentNotFoundException{
         LOGGER.info("Inside fetchDepartmentById method");
         Department department = departmentService.getDepartmentById(departmentId);        
         LOGGER.info("Inside fetchDepartmentById method, Response : " + department);
         return department;
     }
-	 @GetMapping("/name/{name}")
-	    public Department fetchDepartmentByName(@PathVariable("name") String departmentName) {
-	        Department department = departmentService.getDepartmentByName(departmentName);
-	        return department;
-	    }
-	 
-	    @DeleteMapping("/{id}")
-	    public String deleteDepartmentById(@PathVariable("id") Long departmentId) {
-	        departmentService.deleteDepartmentById(departmentId);
-	        return "Department deleted successfully for Department Id" + departmentId;
-	    }
-	 
-	    @PutMapping("/{id}")
-	    public Department updateDepartment(@PathVariable("id") Long departmentId,
-	            @RequestBody Department department) {
-	        Department departmentRes = departmentService.updateDepartment(department, departmentId);
-	        return departmentRes;
-	 
-	    }
-	
-
+ 
+    @GetMapping("/name/{name}")
+    public Department fetchDepartmentByName(@PathVariable("name") String departmentName) {
+        Department department = departmentService.getDepartmentByName(departmentName);
+        return department;
+    }
+ 
+    @DeleteMapping("/{id}")
+    public String deleteDepartmentById(@PathVariable("id") Long departmentId) {
+        departmentService.deleteDepartmentById(departmentId);
+        return "Department deleted successfully for Department Id" + departmentId;
+    }
+ 
+    @PutMapping("/{id}")
+    public Department updateDepartment(@PathVariable("id") Long departmentId,
+            @RequestBody Department department) {
+        Department departmentRes = departmentService.updateDepartment(department, departmentId);
+        return departmentRes;
+ 
+    }
 }

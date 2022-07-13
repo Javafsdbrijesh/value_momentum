@@ -1,7 +1,4 @@
 package com.javafsd.userservice.controller;
-import java.util.List;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -13,36 +10,27 @@ import org.springframework.web.bind.annotation.RestController;
 
 
 import com.javafsd.userservice.entity.User;
-import com.javafsd.userservice.error.UserNotFoundException;
-import com.javafsd.userservice.entity.User;
-import com.javafsd.userservice.service.UserServiceImpl;
+import com.javafsd.userservice.service.Impl.UserService;
+import com.javafsd.userservice.vo.ResponseTemplateView;
 
 @RestController
 @RequestMapping("/users")
 public class UserController {
-	@Autowired
-	private UserServiceImpl userServiceImpl;
-	private final Logger LOGGER = LoggerFactory.getLogger(UserController.class);
 
+	@Autowired
+	private UserService userService;
 	
 	@PostMapping("/")
-	public User saveUser(@RequestBody User user) {
-		User userResponse=userServiceImpl.saveUser(user);
-		return userResponse;
-		
+	public User saveUser(@RequestBody User user)
+	{		
+	User userResp=userService.saveUser(user);
+	  return userResp;	
 	}
-	@GetMapping("/")
-	public List<User> findUsers(){
-		List<User> userList=userServiceImpl.getUsers();
-		return userList;
-	}
-	@GetMapping("/{id}")
-	 public User UserById(@PathVariable("id") Long userId) throws UserNotFoundException{
-       LOGGER.info("Inside fetchDepartmentById method");
-       User user = userServiceImpl.getUserById(userId);        
-       LOGGER.info("Inside fetchDepartmentById method, Response : " + user);
-       return user;
-   }
 	
-
+	@GetMapping("/{id}")
+	public ResponseTemplateView getUserbyId(@PathVariable("id") Long userId)
+	{
+		ResponseTemplateView userResp=userService.getUserbyId(userId);
+		return userResp;
+	}
 }
