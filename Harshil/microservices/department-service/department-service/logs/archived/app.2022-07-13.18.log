@@ -1,0 +1,28 @@
+12:22:15.828 INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate (restartedMain) [o.s.d.r.c.RepositoryConfigurationDelegate] -- Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+12:22:16.029 INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate (restartedMain) [o.s.d.r.c.RepositoryConfigurationDelegate] -- Finished Spring Data repository scanning in 168 ms. Found 1 JPA repository interfaces.
+12:22:16.360 INFO  org.springframework.cloud.context.scope.GenericScope (restartedMain) [o.s.cloud.context.scope.GenericScope] -- BeanFactory id=6a1cefb0-2554-3566-bef5-cb414b5a66af
+12:22:17.301 INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer (restartedMain) [o.s.b.w.e.tomcat.TomcatWebServer] -- Tomcat initialized with port(s): 9092 (http)
+12:22:17.314 INFO  org.apache.juli.logging.DirectJDKLog (restartedMain) [o.a.catalina.core.StandardService] -- Starting service [Tomcat]
+12:22:17.315 INFO  org.apache.juli.logging.DirectJDKLog (restartedMain) [o.a.catalina.core.StandardEngine] -- Starting Servlet engine: [Apache Tomcat/9.0.64]
+12:22:17.518 INFO  org.apache.juli.logging.DirectJDKLog (restartedMain) [o.a.c.c.C.[Tomcat].[localhost].[/]] -- Initializing Spring embedded WebApplicationContext
+12:22:17.519 INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext (restartedMain) [o.s.b.w.s.c.ServletWebServerApplicationContext] -- Root WebApplicationContext: initialization completed in 2682 ms
+12:22:17.715 INFO  org.hibernate.jpa.internal.util.LogHelper (restartedMain) [o.h.jpa.internal.util.LogHelper] -- HHH000204: Processing PersistenceUnitInfo [name: default]
+12:22:17.786 INFO  org.hibernate.Version (restartedMain) [org.hibernate.Version] -- HHH000412: Hibernate ORM core version 5.6.9.Final
+12:22:18.000 INFO  org.hibernate.annotations.common.reflection.java.JavaReflectionManager (restartedMain) [o.h.annotations.common.Version] -- HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+12:22:18.126 INFO  com.zaxxer.hikari.HikariDataSource (restartedMain) [com.zaxxer.hikari.HikariDataSource] -- HikariPool-1 - Starting...
+12:22:18.132 WARN  com.zaxxer.hikari.util.DriverDataSource (restartedMain) [c.z.hikari.util.DriverDataSource] -- Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+12:22:18.455 INFO  com.zaxxer.hikari.HikariDataSource (restartedMain) [com.zaxxer.hikari.HikariDataSource] -- HikariPool-1 - Start completed.
+12:22:18.486 INFO  org.hibernate.dialect.Dialect (restartedMain) [org.hibernate.dialect.Dialect] -- HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+12:22:19.334 INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator (restartedMain) [o.h.e.t.j.p.i.JtaPlatformInitiator] -- HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+12:22:19.344 INFO  org.springframework.orm.jpa.AbstractEntityManagerFactoryBean (restartedMain) [o.s.o.j.LocalContainerEntityManagerFactoryBean] -- Initialized JPA EntityManagerFactory for persistence unit 'default'
+12:22:19.924 WARN  org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration (restartedMain) [o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration] -- spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+12:22:20.460 WARN  org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer (restartedMain) [o.s.b.d.a.OptionalLiveReloadServer] -- Unable to start LiveReload server
+12:22:20.809 INFO  org.springframework.cloud.netflix.eureka.config.DiscoveryClientOptionalArgsConfiguration (restartedMain) [o.s.c.n.e.c.DiscoveryClientOptionalArgsConfiguration] -- Eureka HTTP Client uses RestTemplate.
+12:22:21.215 WARN  org.springframework.cloud.loadbalancer.config.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger (restartedMain) [o.s.c.l.c.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger] -- Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+12:22:21.251 INFO  org.springframework.cloud.netflix.eureka.InstanceInfoFactory (restartedMain) [o.s.c.n.eureka.InstanceInfoFactory] -- Setting initial instance status as: STARTING
+12:22:21.389 INFO  com.netflix.discovery.DiscoveryClient (restartedMain) [c.netflix.discovery.DiscoveryClient] -- Initializing Eureka in region us-east-1
+12:22:21.395 INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver (restartedMain) [c.n.d.s.r.aws.ConfigClusterResolver] -- Resolving eureka endpoints via configuration
+12:22:21.439 INFO  com.netflix.discovery.DiscoveryClient (restartedMain) [c.netflix.discovery.DiscoveryClient] -- Disable delta property : false
+12:22:21.440 INFO  com.netflix.discovery.DiscoveryClient (restartedMain) [c.netflix.discovery.DiscoveryClient] -- Single vip registry refresh property : null
+12:22:21.440 INFO  com.netflix.discovery.DiscoveryClient (restartedMain) [c.netflix.discovery.DiscoveryClient] -- Force full registry fetch : false
+12:22:21.440 INFO  com.netflix.discovery.DiscoveryClient (restartedMain) [c.netflix.discovery.DiscoveryClient] -- Application is null : false

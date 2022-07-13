@@ -7,10 +7,4 @@ import com.javafsd.userservice.entity.User;
 @Repository
 public interface UserRepository extends JpaRepository<User, Long>{ 
 
-	User findByFirstName(String name);
-
-	User findByLastName(String name);
-	
-
-
 }

@@ -1,21 +1,15 @@
-package com.javafsd.departmentservice.service;
-
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
-
+package com.javafsd.departmentservice.service.impl;
+import java.util.List;
 import com.javafsd.departmentservice.entity.Department;
-import com.javafsd.departmentservice.repository.DepartmentRepository;
+import com.javafsd.departmentservice.error.DepartmentNotFoundException; 
+public interface DepartmentService {
+	    public Department saveDepartment(Department department);
+	    public List<Department> getDepartments();
+	    public Department getDepartmentById(Long departmentId) throws DepartmentNotFoundException ;
+	    public Department getDepartmentByName(String name);
 
-@Service
-public class DepartmentService {
+	    public Department updateDepartment(Department department, Long departmentId);
+	}
 
-    @Autowired
-    private DepartmentRepository departmentRepository;
 
-    public Department saveDepartment(Department department) {
-        Department departmentResponse = departmentRepository.save(department);
-
-        return departmentResponse;
-    }
-
-}
+    
