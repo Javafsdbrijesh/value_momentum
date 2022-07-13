@@ -3,18 +3,19 @@ server:
 
 spring:
  application:
-  name:API-GATEWAY
+  name: API-GATEWAY
  cloud:
   gateway:
    routes:
     - id: USER-SERVICE
       uri: lb://USER-SERVICE
       predicates:
-       - path=/user/**
+       - Path=/user/**
     - id: DEPARTMENT-SERVICE
-      uri: lb://UDEPARTMENT-SERVICE
+      uri: lb://DEPARTMENT-SERVICE
       predicates:
-       - path=/departments/**
+       - Path=/departments/**
+
 
 eureka:
  client:
@@ -23,4 +24,4 @@ eureka:
   service-url:
    defaultZone: http://localhost:8761/eureka/
  instance:
-  hostnae: localhost
+  hostname: localhost
