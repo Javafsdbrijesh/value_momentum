@@ -4,7 +4,7 @@ import java.util.List;
 
 
 import com.javafsd.userservice.entity.User;
-import com.javafsd.userservice.error.UserNotFoundException;
+import com.javafsd.userservice.vo.ResponseTemplateView;
 
  
 public interface UserService {
@@ -13,12 +13,12 @@ public interface UserService {
 
     public List<User> getUsers();
 
-    public User getUserById(Long UserId) throws UserNotFoundException;
+    
 
     public User getUserByName(String name);
 
     public void deleteUserById(Long UserId);
 
-    public User updateUser(User User, Long UserId);
 
+    public ResponseTemplateView getUserById(Long userId);
 }
