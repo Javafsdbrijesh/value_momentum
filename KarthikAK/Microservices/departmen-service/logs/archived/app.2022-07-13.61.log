@@ -1,6 +1,6 @@
-11:13:47.276 WARN  com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient (DiscoveryClient-HeartbeatExecutor-0) [c.n.d.s.t.d.RetryableEurekaHttpClient]
+22:25:08.136 WARN  com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient (DiscoveryClient-HeartbeatExecutor-0) [c.n.d.s.t.d.RetryableEurekaHttpClient]
 				-- Request execution failed with message: I/O error on PUT request for "http://localhost:8761/eureka/apps/DEPARTMENT-SERVICE/VSP-4S64JL3:DEPARTMENT-SERVICE:9093": Connect to localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect; nested exception is org.apache.http.conn.HttpHostConnectException: Connect to localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect
-11:13:47.279 ERROR com.netflix.discovery.DiscoveryClient (DiscoveryClient-HeartbeatExecutor-0) [c.netflix.discovery.DiscoveryClient]
+22:25:08.142 ERROR com.netflix.discovery.DiscoveryClient (DiscoveryClient-HeartbeatExecutor-0) [c.netflix.discovery.DiscoveryClient]
 				-- DiscoveryClient_DEPARTMENT-SERVICE/VSP-4S64JL3:DEPARTMENT-SERVICE:9093 - was unable to send heartbeat!
 com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
 	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112)
@@ -15,9 +15,7 @@ com.netflix.discovery.shared.transport.TransportException: Cannot execute reques
 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
 	at java.base/java.lang.Thread.run(Thread.java:834)
-11:13:47.307 INFO  com.netflix.discovery.DiscoveryClient (DiscoveryClient-InstanceInfoReplicator-0) [c.netflix.discovery.DiscoveryClient]
-				-- DiscoveryClient_DEPARTMENT-SERVICE/VSP-4S64JL3:DEPARTMENT-SERVICE:9093: registering service...
-11:13:47.307 INFO  com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient (DiscoveryClient-CacheRefreshExecutor-0) [c.n.d.s.t.d.RedirectingEurekaHttpClient]
+22:25:08.169 INFO  com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient (DiscoveryClient-CacheRefreshExecutor-0) [c.n.d.s.t.d.RedirectingEurekaHttpClient]
 				-- Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://localhost:8761/eureka/}, exception=I/O error on GET request for "http://localhost:8761/eureka/apps/": Connect to localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect; nested exception is org.apache.http.conn.HttpHostConnectException: Connect to localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect stacktrace=org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://localhost:8761/eureka/apps/": Connect to localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect; nested exception is org.apache.http.conn.HttpHostConnectException: Connect to localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect
 	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:785)
 	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:711)
@@ -71,22 +69,5 @@ Caused by: java.net.ConnectException: Connection refused: connect
 	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:142)
 	... 36 more
 
-11:13:47.308 WARN  com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient (DiscoveryClient-CacheRefreshExecutor-0) [c.n.d.s.t.d.RetryableEurekaHttpClient]
+22:25:08.170 WARN  com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient (DiscoveryClient-CacheRefreshExecutor-0) [c.n.d.s.t.d.RetryableEurekaHttpClient]
 				-- Request execution failed with message: I/O error on GET request for "http://localhost:8761/eureka/apps/": Connect to localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect; nested exception is org.apache.http.conn.HttpHostConnectException: Connect to localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect
-11:13:47.308 INFO  com.netflix.discovery.DiscoveryClient (DiscoveryClient-CacheRefreshExecutor-0) [c.netflix.discovery.DiscoveryClient]
-				-- DiscoveryClient_DEPARTMENT-SERVICE/VSP-4S64JL3:DEPARTMENT-SERVICE:9093 - was unable to refresh its cache! This periodic background refresh will be retried in 30 seconds. status = Cannot execute request on any known server stacktrace = com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
-	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112)
-	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getApplications(EurekaHttpClientDecorator.java:134)
-	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$6.execute(EurekaHttpClientDecorator.java:137)
-	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77)
-	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getApplications(EurekaHttpClientDecorator.java:134)
-	at com.netflix.discovery.DiscoveryClient.getAndStoreFullRegistry(DiscoveryClient.java:1101)
-	at com.netflix.discovery.DiscoveryClient.fetchRegistry(DiscoveryClient.java:1014)
-	at com.netflix.discovery.DiscoveryClient.refreshRegistry(DiscoveryClient.java:1531)
-	at com.netflix.discovery.DiscoveryClient$CacheRefreshThread.run(DiscoveryClient.java:1498)
-	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
-	at java.base/java.lang.Thread.run(Thread.java:834)
-
