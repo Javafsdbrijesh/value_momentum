@@ -1,4 +1,4 @@
-package com.java.fsd.userservice;
+package com.javafsd.userservice;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

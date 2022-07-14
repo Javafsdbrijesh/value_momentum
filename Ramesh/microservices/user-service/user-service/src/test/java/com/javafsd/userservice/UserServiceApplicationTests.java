@@ -1,4 +1,4 @@
-package com.java.fsd.userservice;
+package com.javafsd.userservice;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
