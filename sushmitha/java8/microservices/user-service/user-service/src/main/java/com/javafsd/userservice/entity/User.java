@@ -1,38 +1,43 @@
-import javax.persistence.Entity;
+package com.javafsd.userservice.entity;
 
+import javax.persistence.Column;                
+import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
-import javax.persistence.Column;
-
 
 @Entity
-@Table(name ="User")
-public class User {
+@Table(name = "user")
+public class User 
+{
+    @Id //specifies primary key of an entity
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "user_generator")
+    @SequenceGenerator(name="user_generator", sequenceName = "user_seq", allocationSize=50)
+    @Column(name = "user_id", updatable = false, nullable = false)
+    private long userId;
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name="user_id")
-    private Long userId;
-
-    @Column(name="first_name")
+    @Column(name = "first_name")
     private String firstName;
 
-    @Column(name="last_name")
+    @Column(name = "last_name")
     private String lastName;
 
-    @Column(name="email")
+    @Column(name = "email")
     private String email;
 
-    @Column(name="department_id")
-    private Long departmentId;
+    @Column(name = "contact")
+    private long contact;
 
-    public Long getUserId() {
+    @Column(name = "department_id")
+    private long departmentId;
+
+    public long getUserId() {
         return userId;
     }
 
-    public void setUserId(Long userId) {
+    public void setUserId(long userId) {
         this.userId = userId;
     }
 
@@ -60,31 +65,40 @@ public class User {
         this.email = email;
     }
 
-    public Long getDepartmentId() {
+    public long getContact() {
+        return contact;
+    }
+
+    public void setContact(long contact) {
+        this.contact = contact;
+    }
+
+    public long getDepartmentId() {
         return departmentId;
     }
 
-    public void setDepartmentId(Long departmentId) {
+    public void setDepartmenId(long departmentId) {
         this.departmentId = departmentId;
     }
 
-    public User(Long userId, String firstName, String lastName, String email, Long departmentId) {
+    public User() {
+        super();
+    }
+
+    public User(long userId, String firstName, String lastName, String email, long contact, long departmentId) {
         super();
         this.userId = userId;
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
+        this.contact = contact;
         this.departmentId = departmentId;
-    }
-
-    public User() {
-
     }
 
     @Override
     public String toString() {
         return "User [userId=" + userId + ", firstName=" + firstName + ", lastName=" + lastName + ", email=" + email
-                + ", departmentId=" + departmentId + "]";
+                + ", contact=" + contact + ", departmentId=" + departmentId + "]";
     }
 
 
