@@ -1,0 +1,8 @@
+12:06:26.360 INFO  org.springframework.cloud.netflix.eureka.serviceregistry.EurekaAutoServiceRegistration (restartedMain) [o.s.c.n.e.s.EurekaAutoServiceRegistration] -- Updating port to 9092
+12:06:26.389 INFO  com.netflix.discovery.DiscoveryClient (DiscoveryClient-InstanceInfoReplicator-0) [c.netflix.discovery.DiscoveryClient] -- DiscoveryClient_DEPARTMENT-SERVICE/VSP-3C14JL3:DEPARTMENT-SERVICE:9092 - registration status: 204
+12:06:26.564 INFO  org.springframework.boot.StartupInfoLogger (restartedMain) [c.j.d.DepartmentServiceApplication] -- Started DepartmentServiceApplication in 7.414 seconds (JVM running for 8.32)
+12:11:26.003 INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver (AsyncResolver-bootstrap-executor-0) [c.n.d.s.r.aws.ConfigClusterResolver] -- Resolving eureka endpoints via configuration
+12:16:26.004 INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver (AsyncResolver-bootstrap-executor-0) [c.n.d.s.r.aws.ConfigClusterResolver] -- Resolving eureka endpoints via configuration
+12:21:26.013 INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver (AsyncResolver-bootstrap-executor-0) [c.n.d.s.r.aws.ConfigClusterResolver] -- Resolving eureka endpoints via configuration
+12:26:26.015 INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver (AsyncResolver-bootstrap-executor-0) [c.n.d.s.r.aws.ConfigClusterResolver] -- Resolving eureka endpoints via configuration
+12:31:26.018 INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver (AsyncResolver-bootstrap-executor-0) [c.n.d.s.r.aws.ConfigClusterResolver] -- Resolving eureka endpoints via configuration
