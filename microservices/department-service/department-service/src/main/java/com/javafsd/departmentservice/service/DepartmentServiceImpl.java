@@ -1,6 +1,8 @@
 package com.javafsd.departmentservice.service;
 
 import java.util.List;
+
+
 import java.util.Objects;
 import java.util.Optional;
 
@@ -9,15 +11,14 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.javafsd.departmenservice.entity.Department;
-import com.javafsd.departmenservice.error.DepartmentNotFoundException;
-import com.javafsd.departmenservice.repository.DepartmentRepository;
-import com.javafsd.departmenservice.service.impl.DepartmentService;
+import com.javafsd.departmentservice.entity.Department;
+import com.javafsd.departmentservice.error.DepartmentNotFoundException;
+import com.javafsd.departmentservice.repository.DepartmentRepository;
+import com.javafsd.departmentservice.service.impl.DepartmentService;
 
 
 
 
- 
 @Service
 public  class DepartmentServiceImpl implements DepartmentService{
 
@@ -25,8 +26,9 @@ public  class DepartmentServiceImpl implements DepartmentService{
 
     private final Logger LOGGER = LoggerFactory.getLogger(DepartmentServiceImpl.class);
 
-    @Override
-    public Department saveDepartment(Department department) {
+    
+	@Override
+    public Department saveDepartment1(Department department) {
         Department departmentResponse = departmentRepository.save(department);
          LOGGER.info("Department saved successfully in database");
         return departmentResponse;
@@ -38,8 +40,9 @@ public  class DepartmentServiceImpl implements DepartmentService{
         return departmentList;
     }
 
-    @Override
-     public Department getDepartmentById(Long departmentId) throws DepartmentNotFoundException {
+   
+	@Override
+     public Department getDepartmentById1(Long departmentId) throws DepartmentNotFoundException {
          Optional<Department> department = departmentRepository.findById(departmentId);
          if(!department.isPresent()) {
                 throw new DepartmentNotFoundException("Department not Available for Department Id: " + departmentId);
@@ -48,8 +51,8 @@ public  class DepartmentServiceImpl implements DepartmentService{
     }
 
     @Override
-    public Department getDepartmentByName(String name) {
-         Department department = departmentRepository.findByDepartmentName(name);
+    public Department getDepartmentByName1(String name) {
+         Department department = departmentRepository.findBydepartmentName(name);
         return department;
     }
 
@@ -85,4 +88,29 @@ public  class DepartmentServiceImpl implements DepartmentService{
 
 
     }
+
+	@Override
+	public Department saveDepartment(Department department) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Department getDepartmentById(Long departmentId) throws DepartmentNotFoundException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Department getDepartmentByName(String name) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+
+	@Override
+	public Department updateDepartment1(Department department, Long departmentId) {
+		// TODO Auto-generated method stub
+		return null;
+	}
 }

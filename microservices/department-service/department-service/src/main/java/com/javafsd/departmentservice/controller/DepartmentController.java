@@ -2,6 +2,7 @@ package com.javafsd.departmentservice.controller;
 
 import java.util.List;
 
+
 import javax.validation.Valid;
 
 import org.slf4j.Logger;
@@ -19,6 +20,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.javafsd.departmentservice.entity.Department;
 import com.javafsd.departmentservice.error.DepartmentNotFoundException;
 import com.javafsd.departmentservice.service.impl.DepartmentService;
+
 
 @RestController
 @RequestMapping("/departments")
