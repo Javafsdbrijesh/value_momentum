@@ -1,6 +1,6 @@
-16:32:09.103 WARN  com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient (SpringApplicationShutdownHook) [c.n.d.s.t.d.RetryableEurekaHttpClient]
+17:22:39.425 WARN  com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient (SpringApplicationShutdownHook) [c.n.d.s.t.d.RetryableEurekaHttpClient]
 				-- Request execution failed with message: I/O error on DELETE request for "http://localhost:8761/eureka/apps/DEPARTMENT-SERVICE/VSP-JSZ3JL3.bbrouter:DEPARTMENT-SERVICE:8087": Connect to localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect; nested exception is org.apache.http.conn.HttpHostConnectException: Connect to localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect
-16:32:09.108 ERROR com.netflix.discovery.DiscoveryClient (SpringApplicationShutdownHook) [c.netflix.discovery.DiscoveryClient]
+17:22:39.430 ERROR com.netflix.discovery.DiscoveryClient (SpringApplicationShutdownHook) [c.netflix.discovery.DiscoveryClient]
 				-- DiscoveryClient_DEPARTMENT-SERVICE/VSP-JSZ3JL3.bbrouter:DEPARTMENT-SERVICE:8087 - de-registration failedCannot execute request on any known server
 com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
 	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112)
@@ -34,5 +34,99 @@ com.netflix.discovery.shared.transport.TransportException: Cannot execute reques
 	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
 	at org.springframework.boot.SpringApplicationShutdownHook.run(SpringApplicationShutdownHook.java:114)
 	at java.base/java.lang.Thread.run(Thread.java:834)
-16:32:09.113 INFO  com.netflix.discovery.DiscoveryClient (SpringApplicationShutdownHook) [c.netflix.discovery.DiscoveryClient]
+17:22:39.434 INFO  com.netflix.discovery.DiscoveryClient (SpringApplicationShutdownHook) [c.netflix.discovery.DiscoveryClient]
 				-- Completed shut down of DiscoveryClient
+17:22:45.374 INFO  org.springframework.boot.StartupInfoLogger (main) [c.j.d.s.i.DepartmentServiceImplTest]
+				-- Starting DepartmentServiceImplTest using Java 11.0.8 on VSP-JSZ3JL3 with PID 71392 (started by AnilBarla in C:\Valuemomentum\AnilBarla\department\department)
+17:22:45.378 INFO  org.springframework.boot.SpringApplication (main) [c.j.d.s.i.DepartmentServiceImplTest]
+				-- The following 1 profile is active: "dev"
+17:22:45.428 WARN  org.springframework.boot.logging.DeferredLog (main) [o.s.b.c.config.ConfigDataEnvironment]
+				-- Property 'spring.profiles' imported from location 'class path resource [application.yml]' is invalid and should be replaced with 'spring.config.activate.on-profile' [origin: class path resource [application.yml] - 51:13]
+17:22:45.429 WARN  org.springframework.boot.logging.DeferredLog (main) [o.s.b.c.config.ConfigDataEnvironment]
+				-- Property 'spring.profiles' imported from location 'class path resource [application.yml]' is invalid and should be replaced with 'spring.config.activate.on-profile' [origin: class path resource [application.yml] - 36:13]
+17:22:47.200 INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate (main) [o.s.d.r.c.RepositoryConfigurationDelegate]
+				-- Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+17:22:47.530 INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate (main) [o.s.d.r.c.RepositoryConfigurationDelegate]
+				-- Finished Spring Data repository scanning in 311 ms. Found 1 JPA repository interfaces.
+17:22:47.965 INFO  org.springframework.cloud.context.scope.GenericScope (main) [o.s.cloud.context.scope.GenericScope]
+				-- BeanFactory id=aa608f45-bea0-3d4c-af1d-fbd292e70012
+17:22:48.554 INFO  org.springframework.boot.StartupInfoLogger (main) [c.j.d.s.i.DepartmentServiceImplTest]
+				-- Starting DepartmentServiceImplTest using Java 11.0.8 on VSP-JSZ3JL3 with PID 99132 (started by AnilBarla in C:\Valuemomentum\AnilBarla\department\department)
+17:22:48.560 INFO  org.springframework.boot.SpringApplication (main) [c.j.d.s.i.DepartmentServiceImplTest]
+				-- The following 1 profile is active: "dev"
+17:22:48.649 WARN  org.springframework.boot.logging.DeferredLog (main) [o.s.b.c.config.ConfigDataEnvironment]
+				-- Property 'spring.profiles' imported from location 'class path resource [application.yml]' is invalid and should be replaced with 'spring.config.activate.on-profile' [origin: class path resource [application.yml] - 51:13]
+17:22:48.656 WARN  org.springframework.boot.logging.DeferredLog (main) [o.s.b.c.config.ConfigDataEnvironment]
+				-- Property 'spring.profiles' imported from location 'class path resource [application.yml]' is invalid and should be replaced with 'spring.config.activate.on-profile' [origin: class path resource [application.yml] - 36:13]
+17:22:50.177 INFO  org.hibernate.jpa.internal.util.LogHelper (main) [o.h.jpa.internal.util.LogHelper]
+				-- HHH000204: Processing PersistenceUnitInfo [name: default]
+17:22:50.314 INFO  org.hibernate.Version (main) [org.hibernate.Version]
+				-- HHH000412: Hibernate ORM core version 5.6.9.Final
+17:22:50.385 INFO  org.hibernate.annotations.common.reflection.java.JavaReflectionManager (main) [o.h.annotations.common.Version]
+				-- HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+17:22:50.829 INFO  com.zaxxer.hikari.HikariDataSource (main) [com.zaxxer.hikari.HikariDataSource]
+				-- HikariPool-1 - Starting...
+17:22:50.841 WARN  com.zaxxer.hikari.util.DriverDataSource (main) [c.z.hikari.util.DriverDataSource]
+				-- Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+17:22:50.959 INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate (main) [o.s.d.r.c.RepositoryConfigurationDelegate]
+				-- Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+17:22:51.312 INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate (main) [o.s.d.r.c.RepositoryConfigurationDelegate]
+				-- Finished Spring Data repository scanning in 312 ms. Found 1 JPA repository interfaces.
+17:22:51.497 INFO  com.zaxxer.hikari.HikariDataSource (main) [com.zaxxer.hikari.HikariDataSource]
+				-- HikariPool-1 - Start completed.
+17:22:51.558 INFO  org.hibernate.dialect.Dialect (main) [org.hibernate.dialect.Dialect]
+				-- HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+17:22:51.931 INFO  org.springframework.cloud.context.scope.GenericScope (main) [o.s.cloud.context.scope.GenericScope]
+				-- BeanFactory id=aa608f45-bea0-3d4c-af1d-fbd292e70012
+17:22:52.724 INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator (main) [o.h.e.t.j.p.i.JtaPlatformInitiator]
+				-- HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+17:22:52.747 INFO  org.springframework.orm.jpa.AbstractEntityManagerFactoryBean (main) [o.s.o.j.LocalContainerEntityManagerFactoryBean]
+				-- Initialized JPA EntityManagerFactory for persistence unit 'default'
+17:22:53.440 WARN  org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration (main) [o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration]
+				-- spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+17:22:54.007 INFO  org.hibernate.jpa.internal.util.LogHelper (main) [o.h.jpa.internal.util.LogHelper]
+				-- HHH000204: Processing PersistenceUnitInfo [name: default]
+17:22:54.154 INFO  org.hibernate.Version (main) [org.hibernate.Version]
+				-- HHH000412: Hibernate ORM core version 5.6.9.Final
+17:22:54.263 INFO  org.hibernate.annotations.common.reflection.java.JavaReflectionManager (main) [o.h.annotations.common.Version]
+				-- HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+17:22:54.744 INFO  com.zaxxer.hikari.HikariDataSource (main) [com.zaxxer.hikari.HikariDataSource]
+				-- HikariPool-1 - Starting...
+17:22:54.784 WARN  com.zaxxer.hikari.util.DriverDataSource (main) [c.z.hikari.util.DriverDataSource]
+				-- Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+17:22:55.647 INFO  com.zaxxer.hikari.HikariDataSource (main) [com.zaxxer.hikari.HikariDataSource]
+				-- HikariPool-1 - Start completed.
+17:22:55.710 INFO  org.hibernate.dialect.Dialect (main) [org.hibernate.dialect.Dialect]
+				-- HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+17:22:57.983 INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator (main) [o.h.e.t.j.p.i.JtaPlatformInitiator]
+				-- HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+17:22:58.016 INFO  org.springframework.orm.jpa.AbstractEntityManagerFactoryBean (main) [o.s.o.j.LocalContainerEntityManagerFactoryBean]
+				-- Initialized JPA EntityManagerFactory for persistence unit 'default'
+17:22:58.599 INFO  org.springframework.cloud.netflix.eureka.config.DiscoveryClientOptionalArgsConfiguration (main) [o.s.c.n.e.c.DiscoveryClientOptionalArgsConfiguration]
+				-- Eureka HTTP Client uses RestTemplate.
+17:22:59.594 WARN  org.springframework.cloud.loadbalancer.config.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger (main) [o.s.c.l.c.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger]
+				-- Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+17:22:59.848 WARN  org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration (main) [o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration]
+				-- spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+17:22:59.884 INFO  org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver (main) [o.s.b.a.e.web.EndpointLinksResolver]
+				-- Exposing 16 endpoint(s) beneath base path '/actuator'
+17:23:00.297 INFO  org.springframework.cloud.netflix.eureka.InstanceInfoFactory (main) [o.s.c.n.eureka.InstanceInfoFactory]
+				-- Setting initial instance status as: STARTING
+17:23:00.653 INFO  com.netflix.discovery.DiscoveryClient (main) [c.netflix.discovery.DiscoveryClient]
+				-- Initializing Eureka in region us-east-1
+17:23:00.686 INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver (main) [c.n.d.s.r.aws.ConfigClusterResolver]
+				-- Resolving eureka endpoints via configuration
+17:23:00.812 INFO  com.netflix.discovery.DiscoveryClient (main) [c.netflix.discovery.DiscoveryClient]
+				-- Disable delta property : false
+17:23:00.820 INFO  com.netflix.discovery.DiscoveryClient (main) [c.netflix.discovery.DiscoveryClient]
+				-- Single vip registry refresh property : null
+17:23:00.820 INFO  com.netflix.discovery.DiscoveryClient (main) [c.netflix.discovery.DiscoveryClient]
+				-- Force full registry fetch : false
+17:23:00.826 INFO  com.netflix.discovery.DiscoveryClient (main) [c.netflix.discovery.DiscoveryClient]
+				-- Application is null : false
+17:23:00.826 INFO  com.netflix.discovery.DiscoveryClient (main) [c.netflix.discovery.DiscoveryClient]
+				-- Registered Applications size is zero : true
+17:23:00.839 INFO  com.netflix.discovery.DiscoveryClient (main) [c.netflix.discovery.DiscoveryClient]
+				-- Application version is -1: true
+17:23:00.840 INFO  com.netflix.discovery.DiscoveryClient (main) [c.netflix.discovery.DiscoveryClient]
+				-- Getting all instance registry info from the eureka server
