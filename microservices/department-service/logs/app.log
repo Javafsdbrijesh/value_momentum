@@ -1,0 +1,117 @@
+16:49:35.714 INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate (restartedMain) [o.s.d.r.c.RepositoryConfigurationDelegate]
+                -- Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+16:49:35.951 INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate (restartedMain) [o.s.d.r.c.RepositoryConfigurationDelegate]
+                -- Finished Spring Data repository scanning in 212 ms. Found 1 JPA repository interfaces.
+16:49:36.375 INFO  org.springframework.cloud.context.scope.GenericScope (restartedMain) [o.s.cloud.context.scope.GenericScope]
+                -- BeanFactory id=1e29dfb9-d927-374c-81f4-f1bf26318574
+16:49:37.524 INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer (restartedMain) [o.s.b.w.e.tomcat.TomcatWebServer]
+                -- Tomcat initialized with port(s): 9093 (http)
+16:49:37.542 INFO  org.apache.juli.logging.DirectJDKLog (restartedMain) [o.a.catalina.core.StandardService]
+                -- Starting service [Tomcat]
+16:49:37.543 INFO  org.apache.juli.logging.DirectJDKLog (restartedMain) [o.a.catalina.core.StandardEngine]
+                -- Starting Servlet engine: [Apache Tomcat/9.0.64]
+16:49:37.808 INFO  org.apache.juli.logging.DirectJDKLog (restartedMain) [o.a.c.c.C.[Tomcat].[localhost].[/]]
+                -- Initializing Spring embedded WebApplicationContext
+16:49:37.808 INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext (restartedMain) [o.s.b.w.s.c.ServletWebServerApplicationContext]
+                -- Root WebApplicationContext: initialization completed in 3634 ms
+16:49:38.084 INFO  com.zaxxer.hikari.HikariDataSource (restartedMain) [com.zaxxer.hikari.HikariDataSource]
+                -- HikariPool-1 - Starting...
+16:49:38.099 WARN  com.zaxxer.hikari.util.DriverDataSource (restartedMain) [c.z.hikari.util.DriverDataSource]
+                -- Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+16:49:38.524 INFO  com.zaxxer.hikari.HikariDataSource (restartedMain) [com.zaxxer.hikari.HikariDataSource]
+                -- HikariPool-1 - Start completed.
+16:49:38.539 INFO  org.springframework.boot.autoconfigure.h2.H2ConsoleAutoConfiguration (restartedMain) [o.s.b.a.h.H2ConsoleAutoConfiguration]
+                -- H2 console available at '/h2-console'. Database available at 'jdbc:mysql://localhost:3306/javafsd'
+16:49:38.889 INFO  org.hibernate.jpa.internal.util.LogHelper (restartedMain) [o.h.jpa.internal.util.LogHelper]
+                -- HHH000204: Processing PersistenceUnitInfo [name: default]
+16:49:39.019 INFO  org.hibernate.Version (restartedMain) [org.hibernate.Version]
+                -- HHH000412: Hibernate ORM core version 5.6.9.Final
+16:49:39.270 INFO  org.hibernate.annotations.common.reflection.java.JavaReflectionManager (restartedMain) [o.h.annotations.common.Version]
+                -- HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+16:49:39.455 INFO  org.hibernate.dialect.Dialect (restartedMain) [org.hibernate.dialect.Dialect]
+                -- HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+16:49:39.813 ERROR org.springframework.orm.jpa.AbstractEntityManagerFactoryBean (restartedMain) [o.s.o.j.LocalContainerEntityManagerFactoryBean]
+                -- Failed to initialize JPA EntityManagerFactory: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.MappingException: Could not instantiate id generator [entity-name=com.example.departmentservice.entity.Department]
+16:49:39.814 WARN  org.springframework.context.support.AbstractApplicationContext (restartedMain) [o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext]
+                -- Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is javax.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.MappingException: Could not instantiate id generator [entity-name=com.example.departmentservice.entity.Department]
+16:49:39.817 INFO  com.zaxxer.hikari.HikariDataSource (restartedMain) [com.zaxxer.hikari.HikariDataSource]
+                -- HikariPool-1 - Shutdown initiated...
+16:49:39.834 INFO  com.zaxxer.hikari.HikariDataSource (restartedMain) [com.zaxxer.hikari.HikariDataSource]
+                -- HikariPool-1 - Shutdown completed.
+16:49:39.837 INFO  org.apache.juli.logging.DirectJDKLog (restartedMain) [o.a.catalina.core.StandardService]
+                -- Stopping service [Tomcat]
+16:49:39.865 INFO  org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener (restartedMain) [o.s.b.a.l.ConditionEvaluationReportLoggingListener]
+                -- 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+16:49:39.898 ERROR org.springframework.boot.SpringApplication (restartedMain) [o.s.boot.SpringApplication]
+                -- Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is javax.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.MappingException: Could not instantiate id generator [entity-name=com.example.departmentservice.entity.Department]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1804)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1154)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:908)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:734)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
+	at com.example.departmentservice.DepartmentServiceApplication.main(DepartmentServiceApplication.java:10)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: javax.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.MappingException: Could not instantiate id generator [entity-name=com.example.departmentservice.entity.Department]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:421)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1863)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800)
+	... 21 common frames omitted
+Caused by: org.hibernate.MappingException: Could not instantiate id generator [entity-name=com.example.departmentservice.entity.Department]
+	at org.hibernate.id.factory.internal.DefaultIdentifierGeneratorFactory.createIdentifierGenerator(DefaultIdentifierGeneratorFactory.java:147)
+	at org.hibernate.mapping.SimpleValue.createIdentifierGenerator(SimpleValue.java:359)
+	at org.hibernate.mapping.SimpleValue.createIdentifierGenerator(SimpleValue.java:280)
+	at org.hibernate.internal.SessionFactoryImpl.lambda$new$1(SessionFactoryImpl.java:306)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:183)
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:177)
+	at java.base/java.util.HashMap$ValueSpliterator.forEachRemaining(HashMap.java:1675)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:484)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474)
+	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:150)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:173)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:497)
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:305)
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:471)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1498)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:58)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409)
+	... 25 common frames omitted
+Caused by: org.hibernate.HibernateException: Could not fetch the SequenceInformation from the database
+	at org.hibernate.engine.jdbc.env.internal.ExtractedDatabaseMetaDataImpl.sequenceInformationList(ExtractedDatabaseMetaDataImpl.java:300)
+	at org.hibernate.engine.jdbc.env.internal.ExtractedDatabaseMetaDataImpl.getSequenceInformationList(ExtractedDatabaseMetaDataImpl.java:150)
+	at org.hibernate.id.enhanced.SequenceStyleGenerator.getSequenceIncrementValue(SequenceStyleGenerator.java:572)
+	at org.hibernate.id.enhanced.SequenceStyleGenerator.configure(SequenceStyleGenerator.java:254)
+	at org.hibernate.id.factory.internal.DefaultIdentifierGeneratorFactory.createIdentifierGenerator(DefaultIdentifierGeneratorFactory.java:142)
+	... 43 common frames omitted
+Caused by: java.sql.SQLSyntaxErrorException: Unknown table 'SEQUENCES' in information_schema
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:916)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeQuery(ClientPreparedStatement.java:972)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeQuery(HikariProxyPreparedStatement.java)
+	at org.hibernate.tool.schema.extract.spi.ExtractionContext.getQueryResults(ExtractionContext.java:49)
+	at org.hibernate.tool.schema.extract.internal.SequenceInformationExtractorLegacyImpl.extractMetadata(SequenceInformationExtractorLegacyImpl.java:39)
+	at org.hibernate.engine.jdbc.env.internal.ExtractedDatabaseMetaDataImpl.sequenceInformationList(ExtractedDatabaseMetaDataImpl.java:284)
+	... 47 common frames omitted

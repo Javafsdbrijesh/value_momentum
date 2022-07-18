@@ -1,0 +1,30 @@
+12:50:52.011 ERROR org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter (restartedMain) [o.s.b.d.LoggingFailureAnalysisReporter]
+                -- 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 9001 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 9001 or configure this application to listen on another port.
+
+13:56:37.149 ERROR org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter (restartedMain) [o.s.b.d.LoggingFailureAnalysisReporter]
+                -- 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 9001 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 9001 or configure this application to listen on another port.
+
