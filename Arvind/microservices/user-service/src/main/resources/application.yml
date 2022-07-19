@@ -6,11 +6,10 @@ spring :
     active: dev
   application:
     name: USER-SERVICE
- 
+
 ---
 
 spring:
-  profiles: dev
   datasource:
     url: jdbc:mysql://localhost:3306/javafsd
     username: root
@@ -26,37 +25,42 @@ management:
     web:
       exposure:
         include: "*"
+
 ---
+
 spring:
   profiles: qa
   datasource:
-    url: jdbc:mysql://localhost:3306/javafsd
+    url: jdbc:mysql://localhost:3306/javafsd-qa
     username: root
     password: Passw0rd
     driverClassName: com.mysql.jdbc.Driver
   jpa:
     show-sql: true
     hibernate:
-     ddl-auto: update
+     ddl-auto: update 
 
+ 
 ---
+ 
 spring:
-  profiles: dev
+  profiles: prod
   datasource:
-    url: jdbc:mysql://localhost:3306/javafsd
+    url: jdbc:mysql://localhost:3306/javafsd-prod
     username: root
     password: Passw0rd
     driverClassName: com.mysql.jdbc.Driver
   jpa:
     show-sql: true
     hibernate:
-     ddl-auto: update
+     ddl-auto: update 
+
 
 eureka:
  client:
-  register-with-eureka: true
+  registry-with-eureka: true
   fetch-registry: true
   service-url:
    defaultZone: http://localhost:8761/eureka/
- instance:
-  hostname: localhost
+instace:
+ hostname: localhost

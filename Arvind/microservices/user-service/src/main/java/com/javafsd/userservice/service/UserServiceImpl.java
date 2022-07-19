@@ -33,7 +33,7 @@ public class UserServiceImpl implements UserService{
 
         //Connecting to Department microservice using RestTemplate
         //fetch department details from department microservice using department id present in userRespFromDB as above.
-        DepartmentView departmentView = restTemplate.getForObject("http://localhost:8080/departments/"+ userRespFromDB.getDepartmentId(), DepartmentView.class);
+        DepartmentView departmentView = restTemplate.getForObject("http://DEPARTMENT-SERVICE/departments/"+ userRespFromDB.getDepartmentId(), DepartmentView.class);
 
         //Create object of ResponseTemplateView
         ResponseTemplateView responseTemplateView = new ResponseTemplateView();

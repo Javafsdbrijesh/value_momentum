@@ -1,18 +1,20 @@
-11:34:38.868 INFO  com.netflix.discovery.DiscoveryClient (DiscoveryClient-CacheRefreshExecutor-0) [c.netflix.discovery.DiscoveryClient] -- Disable delta property : false
-11:34:38.875 INFO  com.netflix.discovery.DiscoveryClient (DiscoveryClient-CacheRefreshExecutor-0) [c.netflix.discovery.DiscoveryClient] -- Single vip registry refresh property : null
-11:34:38.875 INFO  com.netflix.discovery.DiscoveryClient (DiscoveryClient-CacheRefreshExecutor-0) [c.netflix.discovery.DiscoveryClient] -- Force full registry fetch : false
-11:34:38.875 INFO  com.netflix.discovery.DiscoveryClient (DiscoveryClient-CacheRefreshExecutor-0) [c.netflix.discovery.DiscoveryClient] -- Application is null : false
-11:34:38.875 INFO  com.netflix.discovery.DiscoveryClient (DiscoveryClient-CacheRefreshExecutor-0) [c.netflix.discovery.DiscoveryClient] -- Registered Applications size is zero : true
-11:34:38.876 INFO  com.netflix.discovery.DiscoveryClient (DiscoveryClient-CacheRefreshExecutor-0) [c.netflix.discovery.DiscoveryClient] -- Application version is -1: true
-11:34:38.877 INFO  com.netflix.discovery.DiscoveryClient (DiscoveryClient-CacheRefreshExecutor-0) [c.netflix.discovery.DiscoveryClient] -- Getting all instance registry info from the eureka server
-11:34:38.921 INFO  com.netflix.discovery.DiscoveryClient (DiscoveryClient-HeartbeatExecutor-0) [c.netflix.discovery.DiscoveryClient] -- DiscoveryClient_DEPARTMENT-SERVICE/VSP-2633JL3:DEPARTMENT-SERVICE - Re-registering apps/DEPARTMENT-SERVICE
-11:34:38.921 INFO  com.netflix.discovery.DiscoveryClient (DiscoveryClient-HeartbeatExecutor-0) [c.netflix.discovery.DiscoveryClient] -- DiscoveryClient_DEPARTMENT-SERVICE/VSP-2633JL3:DEPARTMENT-SERVICE: registering service...
-11:34:38.937 INFO  com.netflix.discovery.DiscoveryClient (DiscoveryClient-CacheRefreshExecutor-0) [c.netflix.discovery.DiscoveryClient] -- The response status is 200
-11:34:38.944 INFO  com.netflix.discovery.DiscoveryClient (DiscoveryClient-HeartbeatExecutor-0) [c.netflix.discovery.DiscoveryClient] -- DiscoveryClient_DEPARTMENT-SERVICE/VSP-2633JL3:DEPARTMENT-SERVICE - registration status: 204
-11:35:05.690 INFO  org.apache.juli.logging.DirectJDKLog (http-nio-8080-exec-4) [o.a.c.c.C.[Tomcat].[localhost].[/]] -- Initializing Spring DispatcherServlet 'dispatcherServlet'
-11:35:05.691 INFO  org.springframework.web.servlet.FrameworkServlet (http-nio-8080-exec-4) [o.s.web.servlet.DispatcherServlet] -- Initializing Servlet 'dispatcherServlet'
-11:35:05.693 INFO  org.springframework.web.servlet.FrameworkServlet (http-nio-8080-exec-4) [o.s.web.servlet.DispatcherServlet] -- Completed initialization in 1 ms
-11:35:05.747 INFO  com.javafsd.departmentservice.controller.DepartmentController (http-nio-8080-exec-4) [c.j.d.c.DepartmentController] -- Inside fetchDepartmentById method
-11:35:05.823 INFO  com.javafsd.departmentservice.controller.DepartmentController (http-nio-8080-exec-4) [c.j.d.c.DepartmentController] -- Inside fetchDepartmentById method, Response : com.javafsd.departmentservice.entity.Department@6b75a131
-11:35:11.612 INFO  com.javafsd.departmentservice.controller.DepartmentController (http-nio-8080-exec-7) [c.j.d.c.DepartmentController] -- Inside findDepartments method
-11:39:04.239 INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver (AsyncResolver-bootstrap-executor-0) [c.n.d.s.r.aws.ConfigClusterResolver] -- Resolving eureka endpoints via configuration
+16:54:28.861 INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver (AsyncResolver-bootstrap-executor-0) [c.n.d.s.r.aws.ConfigClusterResolver] -- Resolving eureka endpoints via configuration
+16:59:28.867 INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver (AsyncResolver-bootstrap-executor-0) [c.n.d.s.r.aws.ConfigClusterResolver] -- Resolving eureka endpoints via configuration
+17:04:28.869 INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver (AsyncResolver-bootstrap-executor-0) [c.n.d.s.r.aws.ConfigClusterResolver] -- Resolving eureka endpoints via configuration
+17:09:28.879 INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver (AsyncResolver-bootstrap-executor-0) [c.n.d.s.r.aws.ConfigClusterResolver] -- Resolving eureka endpoints via configuration
+17:14:28.888 INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver (AsyncResolver-bootstrap-executor-0) [c.n.d.s.r.aws.ConfigClusterResolver] -- Resolving eureka endpoints via configuration
+17:19:28.893 INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver (AsyncResolver-bootstrap-executor-0) [c.n.d.s.r.aws.ConfigClusterResolver] -- Resolving eureka endpoints via configuration
+17:24:28.895 INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver (AsyncResolver-bootstrap-executor-0) [c.n.d.s.r.aws.ConfigClusterResolver] -- Resolving eureka endpoints via configuration
+17:29:28.902 INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver (AsyncResolver-bootstrap-executor-0) [c.n.d.s.r.aws.ConfigClusterResolver] -- Resolving eureka endpoints via configuration
+17:34:28.914 INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver (AsyncResolver-bootstrap-executor-0) [c.n.d.s.r.aws.ConfigClusterResolver] -- Resolving eureka endpoints via configuration
+17:39:28.924 INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver (AsyncResolver-bootstrap-executor-0) [c.n.d.s.r.aws.ConfigClusterResolver] -- Resolving eureka endpoints via configuration
+17:44:28.934 INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver (AsyncResolver-bootstrap-executor-0) [c.n.d.s.r.aws.ConfigClusterResolver] -- Resolving eureka endpoints via configuration
+17:49:28.949 INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver (AsyncResolver-bootstrap-executor-0) [c.n.d.s.r.aws.ConfigClusterResolver] -- Resolving eureka endpoints via configuration
+17:54:28.962 INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver (AsyncResolver-bootstrap-executor-0) [c.n.d.s.r.aws.ConfigClusterResolver] -- Resolving eureka endpoints via configuration
+17:59:28.974 INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver (AsyncResolver-bootstrap-executor-0) [c.n.d.s.r.aws.ConfigClusterResolver] -- Resolving eureka endpoints via configuration
+18:04:28.983 INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver (AsyncResolver-bootstrap-executor-0) [c.n.d.s.r.aws.ConfigClusterResolver] -- Resolving eureka endpoints via configuration
+18:09:28.986 INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver (AsyncResolver-bootstrap-executor-0) [c.n.d.s.r.aws.ConfigClusterResolver] -- Resolving eureka endpoints via configuration
+18:14:28.998 INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver (AsyncResolver-bootstrap-executor-0) [c.n.d.s.r.aws.ConfigClusterResolver] -- Resolving eureka endpoints via configuration
+18:19:29.012 INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver (AsyncResolver-bootstrap-executor-0) [c.n.d.s.r.aws.ConfigClusterResolver] -- Resolving eureka endpoints via configuration
+18:24:29.025 INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver (AsyncResolver-bootstrap-executor-0) [c.n.d.s.r.aws.ConfigClusterResolver] -- Resolving eureka endpoints via configuration
+18:29:29.037 INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver (AsyncResolver-bootstrap-executor-0) [c.n.d.s.r.aws.ConfigClusterResolver] -- Resolving eureka endpoints via configuration
