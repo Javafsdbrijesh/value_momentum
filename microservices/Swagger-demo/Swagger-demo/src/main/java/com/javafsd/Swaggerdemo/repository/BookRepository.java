@@ -7,5 +7,6 @@ import com.javafsd.Swaggerdemo.entity.Book;
 
 @Repository
 public interface BookRepository extends JpaRepository<Book, Long> {
+	
 
 }
