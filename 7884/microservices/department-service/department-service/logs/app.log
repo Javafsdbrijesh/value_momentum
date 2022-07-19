@@ -10,3 +10,4 @@
 18:36:52.942 INFO  org.springframework.boot.StartupInfoLogger (restartedMain) [c.j.d.DepartmentServiceApplication] -- Started DepartmentServiceApplication in 9.08 seconds (JVM running for 10.009)
 18:37:21.525 INFO  org.apache.juli.logging.DirectJDKLog (http-nio-9092-exec-1) [o.a.c.c.C.[Tomcat].[localhost].[/]] -- Initializing Spring DispatcherServlet 'dispatcherServlet'
 18:37:21.525 INFO  org.springframework.web.servlet.FrameworkServlet (http-nio-9092-exec-1) [o.s.web.servlet.DispatcherServlet] -- Initializing Servlet 'dispatcherServlet'
+18:37:21.526 INFO  org.springframework.web.servlet.FrameworkServlet (http-nio-9092-exec-1) [o.s.web.servlet.DispatcherServlet] -- Completed initialization in 1 ms
