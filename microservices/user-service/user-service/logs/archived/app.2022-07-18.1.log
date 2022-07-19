@@ -1,0 +1,30 @@
+18:31:50.284 INFO  org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver (restartedMain) [o.s.b.a.e.web.EndpointLinksResolver] -- Exposing 1 endpoint(s) beneath base path '/actuator'
+18:31:50.336 INFO  org.springframework.cloud.netflix.eureka.InstanceInfoFactory (restartedMain) [o.s.c.n.eureka.InstanceInfoFactory] -- Setting initial instance status as: STARTING
+18:31:50.469 INFO  com.netflix.discovery.DiscoveryClient (restartedMain) [c.netflix.discovery.DiscoveryClient] -- Initializing Eureka in region us-east-1
+18:31:50.477 INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver (restartedMain) [c.n.d.s.r.aws.ConfigClusterResolver] -- Resolving eureka endpoints via configuration
+18:31:50.514 INFO  com.netflix.discovery.DiscoveryClient (restartedMain) [c.netflix.discovery.DiscoveryClient] -- Disable delta property : false
+18:31:50.514 INFO  com.netflix.discovery.DiscoveryClient (restartedMain) [c.netflix.discovery.DiscoveryClient] -- Single vip registry refresh property : null
+18:31:50.515 INFO  com.netflix.discovery.DiscoveryClient (restartedMain) [c.netflix.discovery.DiscoveryClient] -- Force full registry fetch : false
+18:31:50.515 INFO  com.netflix.discovery.DiscoveryClient (restartedMain) [c.netflix.discovery.DiscoveryClient] -- Application is null : false
+18:31:50.515 INFO  com.netflix.discovery.DiscoveryClient (restartedMain) [c.netflix.discovery.DiscoveryClient] -- Registered Applications size is zero : true
+18:31:50.515 INFO  com.netflix.discovery.DiscoveryClient (restartedMain) [c.netflix.discovery.DiscoveryClient] -- Application version is -1: true
+18:31:50.516 INFO  com.netflix.discovery.DiscoveryClient (restartedMain) [c.netflix.discovery.DiscoveryClient] -- Getting all instance registry info from the eureka server
+18:31:50.853 INFO  com.netflix.discovery.DiscoveryClient (restartedMain) [c.netflix.discovery.DiscoveryClient] -- The response status is 200
+18:31:50.857 INFO  com.netflix.discovery.DiscoveryClient (restartedMain) [c.netflix.discovery.DiscoveryClient] -- Starting heartbeat executor: renew interval is: 30
+18:31:50.862 INFO  com.netflix.discovery.InstanceInfoReplicator (restartedMain) [c.n.discovery.InstanceInfoReplicator] -- InstanceInfoReplicator onDemand update allowed rate per min is 4
+18:31:50.870 INFO  com.netflix.discovery.DiscoveryClient (restartedMain) [c.netflix.discovery.DiscoveryClient] -- Discovery Client initialized at timestamp 1658149310869 with initial instances count: 2
+18:31:50.874 INFO  org.springframework.cloud.netflix.eureka.serviceregistry.EurekaServiceRegistry (restartedMain) [o.s.c.n.e.s.EurekaServiceRegistry] -- Registering application UNKNOWN with eureka with status UP
+18:31:50.876 INFO  com.netflix.discovery.DiscoveryClient$3 (restartedMain) [c.netflix.discovery.DiscoveryClient] -- Saw local status change event StatusChangeEvent [timestamp=1658149310876, current=UP, previous=STARTING]
+18:31:50.879 INFO  com.netflix.discovery.DiscoveryClient (DiscoveryClient-InstanceInfoReplicator-0) [c.netflix.discovery.DiscoveryClient] -- DiscoveryClient_UNKNOWN/172.22.56.76:9095: registering service...
+18:31:50.914 INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer (restartedMain) [o.s.b.w.e.tomcat.TomcatWebServer] -- Tomcat started on port(s): 9095 (http) with context path ''
+18:31:50.915 INFO  org.springframework.cloud.netflix.eureka.serviceregistry.EurekaAutoServiceRegistration (restartedMain) [o.s.c.n.e.s.EurekaAutoServiceRegistration] -- Updating port to 9095
+18:31:50.947 INFO  com.netflix.discovery.DiscoveryClient (DiscoveryClient-InstanceInfoReplicator-0) [c.netflix.discovery.DiscoveryClient] -- DiscoveryClient_UNKNOWN/172.22.56.76:9095 - registration status: 204
+18:31:51.181 INFO  org.springframework.boot.StartupInfoLogger (restartedMain) [c.j.u.UserServiceApplication] -- Started UserServiceApplication in 8.911 seconds (JVM running for 9.87)
+18:33:43.506 INFO  org.springframework.cloud.netflix.eureka.serviceregistry.EurekaServiceRegistry (Thread-1) [o.s.c.n.e.s.EurekaServiceRegistry] -- Unregistering application UNKNOWN with eureka with status DOWN
+18:33:43.507 INFO  com.netflix.discovery.DiscoveryClient$3 (Thread-1) [c.netflix.discovery.DiscoveryClient] -- Saw local status change event StatusChangeEvent [timestamp=1658149423507, current=DOWN, previous=UP]
+18:33:43.507 INFO  com.netflix.discovery.DiscoveryClient (DiscoveryClient-InstanceInfoReplicator-0) [c.netflix.discovery.DiscoveryClient] -- DiscoveryClient_UNKNOWN/172.22.56.76:9095: registering service...
+18:33:43.518 INFO  com.netflix.discovery.DiscoveryClient (DiscoveryClient-InstanceInfoReplicator-0) [c.netflix.discovery.DiscoveryClient] -- DiscoveryClient_UNKNOWN/172.22.56.76:9095 - registration status: 204
+18:33:43.619 INFO  org.springframework.orm.jpa.AbstractEntityManagerFactoryBean (Thread-1) [o.s.o.j.LocalContainerEntityManagerFactoryBean] -- Closing JPA EntityManagerFactory for persistence unit 'default'
+18:33:43.624 INFO  com.zaxxer.hikari.HikariDataSource (Thread-1) [com.zaxxer.hikari.HikariDataSource] -- HikariPool-1 - Shutdown initiated...
+18:33:43.639 INFO  com.zaxxer.hikari.HikariDataSource (Thread-1) [com.zaxxer.hikari.HikariDataSource] -- HikariPool-1 - Shutdown completed.
+18:33:43.640 INFO  com.netflix.discovery.DiscoveryClient (Thread-1) [c.netflix.discovery.DiscoveryClient] -- Shutting down DiscoveryClient ...

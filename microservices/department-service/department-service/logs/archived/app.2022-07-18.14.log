@@ -1,0 +1,45 @@
+18:28:10.826 WARN  com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient (DiscoveryClient-InstanceInfoReplicator-0) [c.n.d.s.t.d.RetryableEurekaHttpClient] -- Request execution failed with message: I/O error on POST request for "http://localhost:8761/eureka/apps/DEPARTMENT-SERVICE": Connect to localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect; nested exception is org.apache.http.conn.HttpHostConnectException: Connect to localhost:8761 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect
+18:28:10.831 WARN  com.netflix.discovery.DiscoveryClient (DiscoveryClient-InstanceInfoReplicator-0) [c.netflix.discovery.DiscoveryClient] -- DiscoveryClient_DEPARTMENT-SERVICE/172.22.56.76:DEPARTMENT-SERVICE:8082 - registration failed Cannot execute request on any known server
+com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+	at com.netflix.discovery.DiscoveryClient.register(DiscoveryClient.java:876)
+	at com.netflix.discovery.InstanceInfoReplicator.run(InstanceInfoReplicator.java:121)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+18:28:10.832 WARN  com.netflix.discovery.InstanceInfoReplicator (DiscoveryClient-InstanceInfoReplicator-0) [c.n.discovery.InstanceInfoReplicator] -- There was a problem with the instance info replicator
+com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+	at com.netflix.discovery.DiscoveryClient.register(DiscoveryClient.java:876)
+	at com.netflix.discovery.InstanceInfoReplicator.run(InstanceInfoReplicator.java:121)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+18:28:36.660 INFO  com.netflix.discovery.DiscoveryClient (DiscoveryClient-CacheRefreshExecutor-0) [c.netflix.discovery.DiscoveryClient] -- Disable delta property : false
+18:28:36.661 INFO  com.netflix.discovery.DiscoveryClient (DiscoveryClient-CacheRefreshExecutor-0) [c.netflix.discovery.DiscoveryClient] -- Single vip registry refresh property : null
+18:28:36.661 INFO  com.netflix.discovery.DiscoveryClient (DiscoveryClient-CacheRefreshExecutor-0) [c.netflix.discovery.DiscoveryClient] -- Force full registry fetch : false
+18:28:36.661 INFO  com.netflix.discovery.DiscoveryClient (DiscoveryClient-CacheRefreshExecutor-0) [c.netflix.discovery.DiscoveryClient] -- Application is null : false
+18:28:36.661 INFO  com.netflix.discovery.DiscoveryClient (DiscoveryClient-CacheRefreshExecutor-0) [c.netflix.discovery.DiscoveryClient] -- Registered Applications size is zero : true
+18:28:36.662 INFO  com.netflix.discovery.DiscoveryClient (DiscoveryClient-CacheRefreshExecutor-0) [c.netflix.discovery.DiscoveryClient] -- Application version is -1: true
+18:28:36.662 INFO  com.netflix.discovery.DiscoveryClient (DiscoveryClient-CacheRefreshExecutor-0) [c.netflix.discovery.DiscoveryClient] -- Getting all instance registry info from the eureka server
+18:29:55.971 INFO  org.springframework.boot.StartupInfoLogger (restartedMain) [c.j.d.DepartmentServiceApplication] -- Starting DepartmentServiceApplication using Java 11.0.8 on VSP-H733JL3 with PID 50756 (C:\Value Momentum\Sreevidhya Gandham\microservices\department-service\department-service\target\classes started by SreevidhyaGandham in C:\Value Momentum\Sreevidhya Gandham\microservices\department-service\department-service)
+18:29:55.975 INFO  org.springframework.boot.SpringApplication (restartedMain) [c.j.d.DepartmentServiceApplication] -- The following 1 profile is active: "dev"
+18:29:56.024 WARN  org.springframework.boot.logging.DeferredLog (restartedMain) [o.s.b.c.config.ConfigDataEnvironment] -- Property 'spring.profiles' imported from location 'class path resource [application.yml]' is invalid and should be replaced with 'spring.config.activate.on-profile' [origin: class path resource [application.yml] - 50:13]
+18:29:56.024 WARN  org.springframework.boot.logging.DeferredLog (restartedMain) [o.s.b.c.config.ConfigDataEnvironment] -- Property 'spring.profiles' imported from location 'class path resource [application.yml]' is invalid and should be replaced with 'spring.config.activate.on-profile' [origin: class path resource [application.yml] - 36:13]
+18:29:56.024 WARN  org.springframework.boot.logging.DeferredLog (restartedMain) [o.s.b.c.config.ConfigDataEnvironment] -- Property 'spring.profiles' imported from location 'class path resource [application.yml]' is invalid and should be replaced with 'spring.config.activate.on-profile' [origin: class path resource [application.yml] - 17:13]
+18:29:56.026 INFO  org.springframework.boot.logging.DeferredLog (restartedMain) [o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor] -- Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+18:29:56.027 INFO  org.springframework.boot.logging.DeferredLog (restartedMain) [o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor] -- For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'

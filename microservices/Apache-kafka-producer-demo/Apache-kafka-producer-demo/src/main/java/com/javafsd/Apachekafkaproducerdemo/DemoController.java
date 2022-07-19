@@ -14,10 +14,8 @@ public class DemoController {
     @Autowired
     KafkaTemplate<String, Book> kafkaTemplate;
  
-    //private static final String TOPIC = "JavafsdTopic";
+    private static final String TOPIC = "JavafsdTopic";
     private static final String TOPIC2 = "TestTopic";
-
-	private static final String TOPIC = null;
  
     //    @GetMapping("/publish/{message}")
     //    public String publishMessage(@PathVariable("message") final String message) {

@@ -1,16 +1,15 @@
 server:
- port: 9092
-
+ port: 8082
 
 logging:
  level:
   root: INFO
 
 spring :
- profiles:
-   active: dev
- application:
-   name: DEPARTMENT-SERVICE
+  profiles:
+    active: dev
+  application:
+    name: DEPARTMENT-SERVICE
 
 ---
 
@@ -19,18 +18,18 @@ spring:
   datasource:
     url: jdbc:mysql://localhost:3306/javafsd
     username: root
-    password: Passw0rd
+    password: password
     driverClassName: com.mysql.jdbc.Driver
   jpa:
     show-sql: true
     hibernate:
-     ddl-auto: update
+     ddl-auto: update 
 
-managment:
+management:
   endpoints:
     web:
       exposure:
-        include: ""
+        include: "*"
 ---
 
 spring:
@@ -38,12 +37,12 @@ spring:
   datasource:
     url: jdbc:mysql://localhost:3306/javafsd-qa
     username: root
-    password: Passw0rd
+    password: root
     driverClassName: com.mysql.jdbc.Driver
   jpa:
     show-sql: true
     hibernate:
-     ddl-auto: update
+     ddl-auto: update 
 
 ---
 
@@ -52,12 +51,12 @@ spring:
   datasource:
     url: jdbc:mysql://localhost:3306/javafsd-prod
     username: root
-    password: Passw0rd
+    password: root
     driverClassName: com.mysql.jdbc.Driver
   jpa:
     show-sql: true
     hibernate:
-     ddl-auto: update
+     ddl-auto: update 
 
 eureka:
  client:
@@ -65,5 +64,5 @@ eureka:
   fetch-registry: true
   service-url:
    defaultZone: http://localhost:8761/eureka/
-  instance:
-   hostname: localhost
+ instance:
+  hostname: localhost
