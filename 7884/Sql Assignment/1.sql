@@ -3,8 +3,8 @@ create database customer_database;
 use customer_database;
 
 create table Customers(
-    Customer_ID int not null,
-    Customer_Name varchar(25),
+    Customer_ID int ,
+    Customer_Name varchar(25) not null,
     Phone_Number int,
     Address varchar(255),
     City varchar(25),
