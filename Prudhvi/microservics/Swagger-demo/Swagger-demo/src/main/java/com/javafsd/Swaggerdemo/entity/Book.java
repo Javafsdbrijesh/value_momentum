@@ -1,66 +1,68 @@
-package com.javafsd.Swaggerdemo.entity;
+package com.javafsd.swaggerdemo.entity;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
+//import lombok.AllArgsConstructor;
+//import lombok.Data;
+//import lombok.NoArgsConstructor;
 
+
+@Entity
+//@Data
+//@AllArgsConstructor
+//@NoArgsConstructor
 public class Book {
-   @Id
-    private static final String GenerationType = null;
+	
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	private Long id;
+	private String bookName;
+	private String isbn;
 
-    private Long id;
-    private String bookName;
-    private String isbon;
-	/**
-	 * @return the id
-	 */
+	public Book(Long id, String bookName, String isbn) {
+		super();
+		this.id = id;
+		this.bookName = bookName;
+		this.isbn = isbn;
+	}
+	
+
+	public Book() {
+	}
+
+
 	public Long getId() {
 		return id;
 	}
-	/**
-	 * @param id the id to set
-	 */
+
 	public void setId(Long id) {
 		this.id = id;
 	}
-	/**
-	 * @return the bookName
-	 */
+
 	public String getBookName() {
 		return bookName;
 	}
-	/**
-	 * @param bookName the bookName to set
-	 */
+
 	public void setBookName(String bookName) {
 		this.bookName = bookName;
 	}
-	/**
-	 * @return the isbon
-	 */
-	public String getIsbon() {
-		return isbon;
+
+	public String getIsbn() {
+		return isbn;
 	}
-	/**
-	 * @param isbon the isbon to set
-	 */
-	public void setIsbon(String isbon) {
-		this.isbon = isbon;
+
+	public void setIsbn(String isbn) {
+		this.isbn = isbn;
 	}
-	/**
-	 * @return the generationtype
-	 */
-	public static String getGenerationtype() {
-		return GenerationType;
-	}
-	public Book() {
-		
-	}
+
+
 	@Override
 	public String toString() {
-		return "Book [id=" + id + ", bookName=" + bookName + ", isbon=" + isbon + "]";
+		return "Book [id=" + id + ", bookName=" + bookName + ", isbn=" + isbn + "]";
 	}
-    
-
+	
+	
 }

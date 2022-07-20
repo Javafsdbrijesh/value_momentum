@@ -1,24 +1,28 @@
-package com.javafsd.Swaggerdemo.service;
-
+package com.javafsd.swaggerdemo.service;
 
 import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.GetMapping;
-import com.javafsd.Swaggerdemo.entity.Book;
-import com.javafsd.Swaggerdemo.repository.BookRepository;
+
+import com.javafsd.swaggerdemo.entity.Book;
+import com.javafsd.swaggerdemo.repository.BookRepository;
+
 @Service
 public class BookService {
-@Autowired
-private BookRepository bookrepository;
-public Book saveBook(Book book) {
-Book booksave = bookrepository.save(book);
-          return booksave;
-    }
-@GetMapping("/book/")
-public Book getAllBooks() {
-Book bookDb= (Book) ((Object) bookrepository).findAll();
-         return bookDb;
-    }
-}
+	
+	@Autowired
+	private BookRepository bookRepository;
+	
+	public Book saveBook(Book book) {
+		Book bookSave = bookRepository.save(book);
+		return bookSave;
+		
+	}
 
+	public List<Book> getAllBooks() {
+		List<Book> bookDB =  bookRepository.findAll();
+		return bookDB;
+	}
+
+}
