@@ -1,11 +1,2 @@
-10:20:03.908 WARN  com.zaxxer.hikari.pool.HikariPool$HouseKeeper (HikariPool-1 housekeeper) [com.zaxxer.hikari.pool.HikariPool] -- HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=14h24m16s497ms158µs700ns).
-10:22:36.038 INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver (AsyncResolver-bootstrap-executor-0) [c.n.d.s.r.aws.ConfigClusterResolver] -- Resolving eureka endpoints via configuration
-10:27:36.039 INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver (AsyncResolver-bootstrap-executor-0) [c.n.d.s.r.aws.ConfigClusterResolver] -- Resolving eureka endpoints via configuration
-10:32:36.049 INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver (AsyncResolver-bootstrap-executor-0) [c.n.d.s.r.aws.ConfigClusterResolver] -- Resolving eureka endpoints via configuration
-10:37:36.061 INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver (AsyncResolver-bootstrap-executor-0) [c.n.d.s.r.aws.ConfigClusterResolver] -- Resolving eureka endpoints via configuration
-10:42:36.032 INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver (AsyncResolver-bootstrap-executor-0) [c.n.d.s.r.aws.ConfigClusterResolver] -- Resolving eureka endpoints via configuration
-10:47:36.000 INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver (AsyncResolver-bootstrap-executor-0) [c.n.d.s.r.aws.ConfigClusterResolver] -- Resolving eureka endpoints via configuration
-10:52:35.962 INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver (AsyncResolver-bootstrap-executor-0) [c.n.d.s.r.aws.ConfigClusterResolver] -- Resolving eureka endpoints via configuration
-10:57:35.944 INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver (AsyncResolver-bootstrap-executor-0) [c.n.d.s.r.aws.ConfigClusterResolver] -- Resolving eureka endpoints via configuration
-11:02:35.925 INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver (AsyncResolver-bootstrap-executor-0) [c.n.d.s.r.aws.ConfigClusterResolver] -- Resolving eureka endpoints via configuration
-11:07:35.907 INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver (AsyncResolver-bootstrap-executor-0) [c.n.d.s.r.aws.ConfigClusterResolver] -- Resolving eureka endpoints via configuration
+12:22:35.792 INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver (AsyncResolver-bootstrap-executor-0) [c.n.d.s.r.aws.ConfigClusterResolver] -- Resolving eureka endpoints via configuration
+12:27:35.803 INFO  com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver (AsyncResolver-bootstrap-executor-0) [c.n.d.s.r.aws.ConfigClusterResolver] -- Resolving eureka endpoints via configuration
