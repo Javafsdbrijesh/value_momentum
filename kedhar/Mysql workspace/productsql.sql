@@ -73,6 +73,6 @@ $$
  
 call display_gender(@M, "Male");
 select @M;
- 
+ */kedhar reddy
 call display_gender(@F, "Female");
 select @F;
