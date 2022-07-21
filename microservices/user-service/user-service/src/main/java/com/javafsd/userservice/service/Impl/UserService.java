@@ -1,25 +1,19 @@
-package com.javafsd.userservice.service.Impl;
+ package com.javafsd.userservice.service.Impl;
 
-import java.util.List;
-
+import org.springframework.stereotype.Component;
 
 import com.javafsd.userservice.entity.User;
-import com.javafsd.userservice.error.UserNotFoundException;
+import com.javafsd.userservice.vo.ResponseTemplateView;
 
- 
+@Component
 public interface UserService {
 
-    public User saveUser(User User);
+	public User saveUser(User user);
 
-    public List<User> getUsers();
+	public ResponseTemplateView getUserbyId(Long userId);
 
-    public User getUserById(Long UserId) throws UserNotFoundException;
 
-    public User getUserByName(String name);
-
-    public void deleteUserById(Long UserId);
-
-    public User updateUser(User User, Long UserId);
+	
+	
 
 }
-

@@ -1,83 +1,51 @@
 package com.javafsd.userservice.service;
-import java.util.List;
 
-import java.util.Objects;
-import java.util.Optional;
-
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.web.client.RestTemplate;
 
 import com.javafsd.userservice.entity.User;
-import com.javafsd.userservice.error.UserNotFoundException;
 import com.javafsd.userservice.repository.UserRepository;
 import com.javafsd.userservice.service.Impl.UserService;
+import com.javafsd.userservice.vo.DepartmentView;
+import com.javafsd.userservice.vo.ResponseTemplateView;
 
- 
 @Service
 public class UserServiceImpl implements UserService{
 
-    @Autowired 
-    private UserRepository UserRepository;
+    @Autowired
+    private UserRepository userRepository;
 
-    private final Logger LOGGER = LoggerFactory.getLogger(UserServiceImpl.class);
+    @Autowired
+    private RestTemplate restTemplate;
 
     @Override
-    public User saveUser(User User) {
-        User UserResponse = UserRepository.save(User);
-        LOGGER.info("User saved successfully in database");
-        return UserResponse; 
+    public User saveUser(User user) {
+        User userResp = userRepository.save(user);
+        return userResp;
     }
 
     @Override
-    public List<User> getUsers() {
-        List<User> UserList = UserRepository.findAll();
-        return UserList;
+    public ResponseTemplateView getUserbyId(Long userId) {
+        //fetch user details from database based on user id 
+        User userRespFromDB = userRepository.findById(userId).get();
+
+        //Connecting to Department microservice using RestTemplate
+        //fetch department details from department microservice using department id present in userRespFromDB as above.
+        DepartmentView departmentView = restTemplate
+                .getForObject("http://localhost:8080/departments/"+ userRespFromDB.getDepartmentId(), DepartmentView.class);
+
+        //Create object of ResponseTemplateView
+        ResponseTemplateView responseTemplateView = new ResponseTemplateView();
+
+        //set user details in ResponseTemplateView
+        responseTemplateView.setUser(userRespFromDB);
+
+        //set department details in ResponseTemplateView
+        responseTemplateView.setDepartmentView(departmentView);
+
+        return responseTemplateView;
     }
 
-    @Override
-    public User getUserById(Long UserId) throws UserNotFoundException {
-        Optional<User> User = UserRepository.findById(UserId);
-        if(!User.isPresent()) {
-            throw new UserNotFoundException("User not Available for User Id: " + UserId);
-        }
-        return User.get();
-    }
-
-    @Override
-    public User getUserByName(String name) {
-        User User = UserRepository.findByUserName(name);
-        return User;
-    }
-
-    @Override
-    public void deleteUserById(Long UserId) {
-        UserRepository.deleteById(UserId);
-    }
-
-    @Override
-    public User updateUser(User UserReq, Long UserId) {
-        User UserDB = UserRepository.findById(UserId).get();
-
-        if(Objects.nonNull(UserReq.getFirstName()) && 
-                !"".equalsIgnoreCase(UserReq.getFirstName())){
-            UserDB.setFirstName(UserReq.getFirstName());
-            LOGGER.info("User firstName updates successfully");
-        }
-        if(Objects.nonNull(UserReq.getLastName()) && 
-                !"".equalsIgnoreCase(UserReq.getLastName())) {
-            UserDB.setLastName(UserReq.getLastName());
-            LOGGER.info("User last updates successfully");
-        }
-        if(Objects.nonNull(UserReq.getEmail()) && 
-                !"".equalsIgnoreCase(UserReq.getEmail())) {
-            UserDB.setEmail(UserReq.getEmail());
-            LOGGER.info("User  email updated successfully");
-        }
-        User dept = UserRepository.save(UserDB);
-
-        return dept;
-    }
+    
 }
-
