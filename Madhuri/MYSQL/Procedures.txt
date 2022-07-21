@@ -1,0 +1,18 @@
+delimiter $$
+CREATE PROCEDURE  SelectCustomers()
+BEGIN
+select Customer_name,Phonenumber from customers;
+END
+$$
+CALL SelectCustomers();
+
+delimiter $$
+create procedure SelectAllMembers()
+begin
+select * from members;
+end
+$$
+ 
+call SelectAllMembers();
+ 
+call SelectAllCustomers;
