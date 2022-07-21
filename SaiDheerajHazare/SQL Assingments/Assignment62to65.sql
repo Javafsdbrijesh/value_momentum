@@ -1,3 +1,4 @@
+use customer_database;
 /*Assignment 62*/
 select 
     m.member_id,
