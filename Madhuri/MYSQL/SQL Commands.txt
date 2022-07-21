@@ -1,0 +1,28 @@
+Customer_Name varchar(25) not null,
+Phonenumber int unique,
+Address varchar(25),
+City varchar(25),
+Country varchar(25)
+);
+CREATE VIEW Hyd_Customers AS
+SELECT Customer_Name, Phonenumber
+FROM customers
+WHERE City="Hyderabad";
+drop view Hyd_Customers;
+drop table customers;
+drop database customer_database;
+ALTER TABLE customers
+ ADD (gender VARCHAR(20), age int); 
+ALTER TABLE customers
+MODIFY Phonenumber varchar(25); 
+insert into customers (Customer_ID,Customer_Name,Phonenumber,Address ,City ,Country ,gender,age)
+values(1,"madhuri","89999","gachibowli","hyderabad","india","female",20),(2,"mansa","189999","mindspace","hyderabad","india","female",21),
+(3,"shiva","5999","narayanguda","hyderabad","india","male",18),(4,"srinivasa","9999","madhapur","warangal","india","male",30),
+(5,"shirisha","6999","madhapur","warangal","india","male",29);
+update customers
+set Customer_Name="haritha" where Customer_ID=2;
+CREATE TABLE members (
+    member_id INT AUTO_INCREMENT,
+    name VARCHAR(100),
+    PRIMARY KEY (member_id)
+);
