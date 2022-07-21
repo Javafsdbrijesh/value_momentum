@@ -1,0 +1,47 @@
+create database customer_database;
+use customer_database;
+
+create table Customers(
+Customer_ID int,
+Customer_Name varchar(25),
+Phone_Number int unique,
+Address varchar(255),
+City varchar(25),
+Country varchar(25)
+);
+
+create view Hyd_Customers as
+select Customer_Name,Phone_Number
+from 
+Customers
+where
+City="Hyderabad";
+
+drop view Hyd_Customers;
+
+drop table Customers;
+
+drop database customer_database;
+
+alter table customers
+add column Gender varchar(25);
+
+alter table customers
+drop column Gender;
+
+alter table customers
+modify Phone_Number int;
+
+truncate table customers;
+
+insert into customers(Customer_ID,Customer_Name,Phone_Number,Address,City,Country)
+values(1,"Yashu",9908806,"19 balaji street","Hyderabad","India"),(2,"Srinu",9786216,"nehru road","Bangalore","India"),(3,"Hareeshwa",96187185,"Teachers colony","Pune","India");
+
+update customers
+set Address ="nehru road" where Customer_id=2;
+
+select * from customers;
+
+select Customer_Name, City from customers;
+ 
+select * from customers where Customer_Name like "h%";
