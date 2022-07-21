@@ -1,4 +1,4 @@
-package com.javafsd.Swaggerdemo.service;
+package com.javafsd.swaggerdemo.service;
 
 import java.util.List;
 

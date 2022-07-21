@@ -1,6 +1,7 @@
-package com.javafsd.Swaggerdemo.config;
+package com.javafsd.swaggerdemo.config;
 
 import java.time.LocalDate;
+
 import java.time.LocalDateTime;
 
  
@@ -22,7 +23,7 @@ import springfox.documentation.spring.web.plugins.Docket;
  
 
 @Configuration
-@com.javafsd.Swaggerdemo.EnableSwagger2
+@EnableSwagger2
 public class SwaggerConfig {
     
     @Bean
@@ -44,7 +45,7 @@ public class SwaggerConfig {
             .title("Javafsd - Spring Boot Swagger Configuration Demo")
             .description("We are checking Swagger configuration for application")
             .version("1.1.0")
-            .contact(new Contact("Brijesh", null, "javafsdbrijesh@gmail.com"))
+            .contact(new Contact("deekshitha", null, "malkajideekshitha410@gmail.com"))
             .build();
     }
 

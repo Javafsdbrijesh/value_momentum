@@ -1,4 +1,4 @@
-package com.javafsd.apachekafkaproducerdemo;
+package com.example.apachekafkaproducerdemo;
  
 import java.util.HashMap;
 import java.util.Map;

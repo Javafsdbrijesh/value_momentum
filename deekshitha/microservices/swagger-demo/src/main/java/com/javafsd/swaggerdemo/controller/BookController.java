@@ -1,4 +1,4 @@
-package com.javafsd.Swaggerdemo.controller;
+package com.javafsd.swaggerdemo.controller;
 
 import java.util.List;
 
