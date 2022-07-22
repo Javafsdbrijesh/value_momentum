@@ -16,7 +16,7 @@ import com.javafsd.OrderDetails.service.OrderDetailsService;
 	    private OrderDetailsService orderDetailsService;
 
 	    public OrderDetails saveorder(@RequestBody OrderDetails order) {
-	        OrderDetails userResp = orderDetailsService.saveOrderDetails(order);
+	        OrderDetails userResp = orderDetailsService.saveDetails(order);
 	        return userResp;
 	}
 }

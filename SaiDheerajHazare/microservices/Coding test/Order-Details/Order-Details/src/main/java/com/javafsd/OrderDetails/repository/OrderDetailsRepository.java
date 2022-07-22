@@ -1,9 +1,10 @@
-package com.javafsd.orderdetails.repository;
+package com.javafsd.OrderDetails.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import com.javafsd.orderdetails.entity.OrderDetails;
+import com.javafsd.OrderDetails.entity.OrderDetails;
+
 
 
 @Repository

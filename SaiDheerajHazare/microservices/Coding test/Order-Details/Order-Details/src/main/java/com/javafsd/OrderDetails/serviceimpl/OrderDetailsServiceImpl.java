@@ -7,7 +7,10 @@ package com.javafsd.OrderDetails.serviceimpl;
 	import org.springframework.web.client.RestTemplate;
 
 import com.javafsd.OrderDetails.entity.OrderDetails;
-import com.javafsd.orderdetails.repository.OrderDetailsRepository;
+import com.javafsd.OrderDetails.repository.OrderDetailsRepository;
+import com.javafsd.OrderDetails.service.OrderDetailsService;
+
+
 
 
 	@Service
