@@ -13,4 +13,4 @@ spring:
      ddl-auto: update
   mvc:
     pathmatch:
-     matching-strategy: ant_path_matche
+     matching-strategy: ant_path_matcher
