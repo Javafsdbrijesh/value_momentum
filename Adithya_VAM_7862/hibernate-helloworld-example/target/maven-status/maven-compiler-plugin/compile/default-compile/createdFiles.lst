@@ -1,0 +1,4 @@
+net\javafsd\hibernate\App.class
+net\javafsd\hibernate\entity\Customer.class
+net\javafsd\hibernate\util\HibernateUtil.class
+net\javafsd\hibernate\entity\Student.class
