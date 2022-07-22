@@ -1,0 +1,57 @@
+<htm>
+    <body>
+      <h1>Variables in Javascript!</h1>
+      <p id="demo">Hello how are you !!</p>
+      <script>
+      /*
+          When to use:
+          var: 1995 to 2015
+          let and const:  in 2015 ....
+          In general : always declare variables with "const"
+          if value of variable can change:  use "let".
+      */
+        //  using var
+        var x = 5;
+        var y = 4;
+        var z = x + y;
+        //using let
+        let a = 2;
+        let b = 6;
+        let c = a + b;
+        //using nothing
+        d = 10;
+        e = 11;
+        f = d + e;
+        //using const
+        const costPrice = 100;
+        const sellingPrice = 120;
+        const profit = sellingPrice - costPrice;
+        //checking split
+        var sampleString = "My name is javafsd";
+        var splitString = sampleString.split(" ");
+        //checking Math
+        let mathematicalVar = Math.floor(Math.random() *10 + 1);
+      //   if(19 < 18){
+      //       document.getElementById("demo").innerHTML = "Value is : " + mathematicalVar;
+      //   } else {
+      //     document.getElementById("demo").innerHTML = "In else condition";
+      //   }
+        const cars = ["Audi","BMW", "Ford", "Maruti", "Hyundai"];
+       
+        //Print/output each car in next line
+        let  output = "";
+        for(let i = 0; i < cars.length; i++){
+          output += cars[i] + "<br>"
+        }
+        //checking Date
+        const demoDate = new Date();
+        //const year = new Date("2022");  
+        //document.getElementById("demo").innerHTML = demoDate.getTime();
+        document.getElementById("demo").innerHTML = demoDate.getDay();
+        //document.getElementById("demo").innerHTML = demoDate.getDate();
+        //document.getElementById("demo").innerHTML = demoDate.getFullYear();
+       // document.getElementById("demo").innerHTML = demoDate.getMonth();
+       // document.getElementById("demo").innerHTML = demoDate.getMinutes();
+      </script>
+    </body>
+  </htm>
