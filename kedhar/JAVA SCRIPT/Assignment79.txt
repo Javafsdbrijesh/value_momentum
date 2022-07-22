@@ -1,0 +1,5 @@
+function hello() 
+{
+  alert("Hello im here guys!");
+  alert("Nice to meet you");
+}
