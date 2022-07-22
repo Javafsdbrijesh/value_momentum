@@ -1,0 +1,39 @@
+create database customer_database;
+use customer_database;
+create table Customers (
+Customer_ID int,
+Customer_Name varchar(25),
+Phone_Number int,
+Address varchar(255),
+City varchar(25),
+Country varchar(25)
+);
+create view Hyd_Customers as
+ select Customer_Name, Phone_Number 
+ from Customers where city = "Hyderabad";
+ drop view Hyd_Customers;
+ drop table Customers;
+ drop database customer_database;
+ alter table Customers
+ add column Gender varchar(20);
+ alter table Customers
+ add column age int;
+ alter table Customers
+ modify Phone_Number varchar(20);
+ alter table Customers
+ drop column Gender;
+ alter table Customers
+ drop column age;
+ truncate table Customers;
+  insert into Customers (Customer_ID,Customer_Name,Phone_Number,Address,City,Country)
+  values(1,"Vishishta",2345678123,"VV Nagar","Hyderabad","India");
+  insert into Customers (Customer_ID,Customer_Name,Phone_Number,Address,City,Country)
+  values(2,"Swapnika",9876543210,"Srisailam","Kurnool","India");
+  insert into Customers (Customer_ID,Customer_Name,Phone_Number,Address,City,Country)
+  values(3,"Deekshitha",4520128491,"Sangareddy","Medak","India");
+  insert into Customers (Customer_ID,Customer_Name,Phone_Number,Address,City,Country)
+  values(4,"Yashwanth",7110572893,"Hanamkonda","Warangal","India");
+  insert into Customers (Customer_ID,Customer_Name,Phone_Number,Address,City,Country)
+  values(5,"Vyas",5192037496,"Miyapur","Hyderabad","India");
+  update Customers
+  set Customer_Name = "Nayana" where Customer_ID = 2;
