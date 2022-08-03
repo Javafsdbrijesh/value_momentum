@@ -1,0 +1,37 @@
+<p>edit-user works!</p>
+<h1>Edit User</h1>
+<form>
+
+    <table class="table table-bordered" *ngIf="user">
+
+        <tbody >
+
+             <tr>
+
+                <th>Id</th>
+
+                <td>
+
+                    <input type="text" name="id" id="id" value="{{user.id}}" readonly>
+
+                </td>
+
+             </tr>
+
+             <tr>
+
+                <th>Name</th>
+
+                <td>
+
+                    <input type="text" name="name" id="name" value="{{user.name}}" >
+                </td>
+
+            </tr>
+
+            <tr>
+
+               <th>Email</th>
+
+               <td>
+
