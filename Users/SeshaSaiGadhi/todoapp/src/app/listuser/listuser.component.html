@@ -1,0 +1,111 @@
+<h1>List Users</h1>
+
+
+
+<table class="table table-bordered" *ngIf="users">
+
+
+
+    <thead>
+
+
+
+        <tr>
+
+
+
+            <th>Sno</th>
+
+
+
+            <th>Id</th>
+
+
+
+            <th>Name</th>
+
+
+
+            <th>Email</th>
+
+
+
+            <th>Action</th>
+
+
+
+        </tr>
+
+
+
+    </thead>
+
+
+
+    <tbody>
+
+
+
+        <tr *ngFor="let u of users;let i=index">
+            <td>{{i+1}}</td>
+
+
+
+            <td>{{u.id}}</td>
+
+
+
+            <td>{{u.name}}</td>
+
+
+
+            <td>{{u.email}}</td>
+
+            <td>
+
+
+
+                <a routerLink="/viewuser" class="bth bth-primary">View</a> &nbsp;&nbsp;  
+
+
+
+            <a routerLink="/edituser" class="bth bth-info">Edit</a> &nbsp;&nbsp;
+
+
+
+            <button type="button" class="btn btn-danger"
+
+
+
+            (click)="deleteUser()">Delete</button>
+
+
+
+        </td>
+
+
+
+    </tr>
+
+
+
+</tbody>
+
+
+
+
+
+
+</table>
+
+
+
+<div *ngIf="!users">
+
+
+
+    no records
+
+
+
+</div>

@@ -1,0 +1,53 @@
+<p>view-user works!</p>
+<h1>View User</h1>
+
+<table class="table table-bordered" *ngIf="user">
+
+    <tbody>
+
+        <tr>
+
+            <th>Id</th>
+
+            <td>{{user.id}}</td>
+
+        </tr>
+
+        <tr>
+
+            <th>Name</th>
+
+            <td>{{user.name}}</td>
+
+        </tr>
+
+        <tr>
+
+            <th>Email</th>
+
+            <td>{{user.email}}</td>
+
+        </tr>
+
+        <tr>
+
+            <th></th>
+
+            <td>
+
+                <button type="button" class="btn btn-danger"
+
+                (click)="deleteUser()">Delete</button> &nbsp;
+
+                <button type="button" class="btn btn-success"
+
+                routerLink="/users">Back</button>
+
+            </td>
+
+        </tr>
+
+    </tbody>
+
+</table>
+

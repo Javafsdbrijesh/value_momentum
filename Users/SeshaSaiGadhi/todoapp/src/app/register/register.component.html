@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Registration</title>
+
+</head>
+
+<body>
+
+    <h1>Registration</h1>
+
+
+
+    <form onsubmit="register()">
+
+        <div>
+
+            <label for="name">Name:</label>
+
+            <input type="text" name="name" id="name" required autofocus>
+
+        </div>
+
+        <div>
+
+            <label for="email">Email:</label>
+
+            <input type="email" name="email" id="email" required>
+
+        </div>
+        <div>
+
+          <label for="password">Password:</label>
+
+          <input type="password" name="password" id="password">
+
+      </div>
+
+      <div>
+
+          <button type="submit">Submit</button>
+
+      </div>
+
+  </form>
+
+
+
+  <script>
+
+      //instead of this js, we are going to call ts function.
+
+      function register(){
+
+          event.preventDefault();
+
+          alert("Registration Form is submitted");
+
+      }
+
+  </script>
+
+</body>
+
+</html>
+<h1>Registration Form</h1>
+
+<!--Interpolation {{propertyname}}-->
+
+<h3>Interpolation</h3>
+
+Name: {{name}}
+
+<h3>Structural Directive - *ngIf</h3>
+
+<!--Directives ( Structural Directives -If/for)-->
+
+<div *ngIf="isValidUser">
+
+    Valid User
+
+</div>
+
+<div *ngIf="!isValidUser">
+
+    Invalid User
+
+</div>
+
+<h3>Structural Directive - *ngFor</h3>
+
+<!-- for loop-->
+
+<!-- <ul>
+
+    <li>CSE</li>
+
+    <li>IT</li>
+
+    <li>MECH</li>
+
+</ul> -->
+<ul>
+
+  <li *ngFor="let d of departments">{{d}}</li>
+
+</ul>
+
+<table border="1">
+
+  <thead><tr><th>Sno</th><th>Name</th></tr></thead>
+
+  <tbody>
+
+      <tr *ngFor="let d of departments;let i=index">
+
+          <td>{{i+1}}</td>
+
+          <td>{{d}}</td>
+
+      </tr>
+
+  </tbody>
+</table>
+
+<select name="dept" id="dept">
+
+  <!-- <option value='CSE'>CSE </option>  -->
+
+<option *ngFor="let d of departments" value="{{d}}">{{d}}</option>
+
+</select>
+
+<!-- Event Binding ( click )-->
+
+<button type="button" (click)="onClick()">Button</button>
